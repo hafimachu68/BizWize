@@ -1,0 +1,246 @@
+.why-chat-container {
+  font-family: 'Segoe UI', sans-serif;
+  /* Combine your existing gradient with a subtle semi-transparent overlay gradient */
+ background: linear-gradient(to bottom left, #f9fafb, #e7f0ff);
+  padding: 4rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+.why-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.why-header h1 {
+ font-size: 3rem;
+    font-weight: 800;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.why-header h1 span {
+  color: #2563eb;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: #475569;
+  margin-top: 0.5rem;
+}
+
+/* Chat Section */
+.chat-section {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.chat-bubble {
+  display: flex;
+  max-width: 650px;
+  padding: 1.25rem 1.5rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(135deg, #a3cef1, #d7e8fb); /* light gradient */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  animation-name: fadeInUpBounce;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transition:
+    background 0.4s ease,
+    box-shadow 0.4s ease,
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #1e40af;
+  cursor: default;
+}
+
+.chat-bubble.left {
+  align-self: flex-start;
+  border-top-left-radius: 0;
+  background: linear-gradient(135deg, #a3cef1, #d7e8fb);
+}
+
+.chat-bubble.right {
+  align-self: flex-end;
+  border-top-right-radius: 0;
+  background: linear-gradient(135deg, #b5defb, #c6e1ff);
+}
+
+/* Hover effect */
+.chat-bubble:hover {
+  background: linear-gradient(135deg, #8bbbe8, #a1c9fa); /* slightly darker */
+  box-shadow:
+    0 0 12px 3px rgba(37, 99, 235, 0.4),
+    0 6px 18px rgba(37, 99, 235, 0.25);
+  transform: scale(1.03);
+  z-index: 10;
+}
+
+
+.chat-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  margin-top: 0.25rem;
+}
+
+.chat-content h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #1d4ed8;
+}
+
+.chat-content p {
+  margin: 0.5rem 0 0;
+  color: #475569;
+}
+
+/* CTA Section */
+.chat-cta {
+  margin-top: 4rem;
+  text-align: center;
+  background: linear-gradient(to right, #2563eb, #38bdf8);
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+
+.chat-cta h2 {
+  font-size: 2rem;
+}
+
+.chat-cta p {
+  font-size: 1.15rem;
+  margin: 1rem 0;
+}
+
+.chat-button {
+  
+  border: solid;
+  border-radius: 999px;
+  
+}
+
+
+
+@keyframes fadeInUpBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Animated background grid */
+.grid-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 80px 80px;
+  }
+}/* Icon Background Layer */
+.icon-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Floating emojis/icons */
+.icon-float {
+  position: absolute;
+  font-size: 2.5rem;
+  opacity: 0.07;
+  animation: floatIcons 20s ease-in-out infinite alternate;
+  color: #2563eb;
+}
+
+/* Animate float */
+@keyframes floatIcons {
+  0% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+    opacity: 0.08;
+  }
+  50% {
+    transform: translateY(-15px) scale(1.1) rotate(4deg);
+    opacity: 0.12;
+  }
+  100% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+    opacity: 0.08;
+  }
+}
+
+
+/* Specific Positions */
+.icon1  { top: 5%;   left: 3%;   animation-delay: 0s; }
+.icon2  { top: 15%;  left: 25%;  animation-delay: 1s; }
+.icon3  { top: 20%;  left: 50%;  animation-delay: 2s; }
+.icon4  { top: 10%;  left: 75%;  animation-delay: 3s; }
+
+.icon5  { top: 35%;  left: 10%;  animation-delay: 1.5s; }
+.icon6  { top: 40%;  left: 45%;  animation-delay: 2.5s; }
+.icon7  { top: 30%;  left: 80%;  animation-delay: 0.5s; }
+
+.icon8  { top: 60%;  left: 5%;   animation-delay: 2s; }
+.icon9  { top: 65%;  left: 30%;  animation-delay: 3.5s; }
+.icon10 { top: 70%;  left: 60%;  animation-delay: 1.8s; }
+.icon11 { top: 60%;  left: 85%;  animation-delay: 2.8s; }
+
+.icon12 { top: 85%;  left: 50%;  animation-delay: 3.2s; }
+
+/* SVG Pattern Layer */
+.svg-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='%232563eb' fill-opacity='0.035' /%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,100 Q50,0 100,100' stroke='%232563eb' stroke-opacity='0.03' fill='transparent'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 80px 80px, 200px 200px;
+  z-index: 0;
+  animation: patternMove 80s linear infinite;
+  pointer-events: none;
+}
+
+/* Subtle scroll on the pattern */
+@keyframes patternMove {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 100px 100px, -200px -200px; }
+}
+

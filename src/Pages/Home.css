@@ -1,0 +1,46 @@
+.home-page {
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.hero-section {
+  background: linear-gradient(to right, #0f172a, #3b82f6);
+  color: white;
+  padding: 4rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.hero-section .cta-button {
+  background-color: white;
+  color: #0f172a;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.services {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 200px;
+}
+
+.about-snippet, .contact-short {
+  text-align: center;
+  margin-top: 3rem;
+}

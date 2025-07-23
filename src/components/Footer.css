@@ -1,0 +1,14 @@
+.footer {
+  background: linear-gradient(to right, #0f172a, #2e5ddd);
+  color: #e5e7eb;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  
+}
+
+.footer-inner p {
+  margin: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
