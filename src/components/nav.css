@@ -1,0 +1,383 @@
+.navbar {
+  padding: 1rem 2rem; /* Adjust padding as needed */
+}
+
+/* Set the maximum width for the list item */
+.nav-item.mn {
+  max-width: 300px; /* Adjust this value as needed */
+  white-space: normal; /* Allow the text to wrap */
+}
+
+/* Optional: You can add styling to the paragraph for better control */
+.dropara {
+  margin-top: 5px;
+  font-size: 14px; /* Adjust the font size as needed */
+  line-height: 1.5; /* Improve readability */
+}
+
+
+.log {
+
+  /* Media query for smaller viewports */
+  @media (max-width: 768px) {
+    margin-left: 1rem; /* Adjust margin for smaller viewports */
+  }
+}
+.nav-link{
+  font-family: "Blinker", sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+  color: #193054;
+}
+.mnav-link {
+  display: flex; /* Use flexbox for proper alignment */
+  justify-content: space-between; /* Space between text and icon */
+  align-items: center; /* Center vertically */
+}
+
+.mnav-link .svg-inline--fa {
+  margin-left: 10px; /* Adjust this value as needed */
+}
+
+.link{
+  font-family: "Blinker", sans-serif !important;
+  font-weight: 600;
+  color: black; 
+}
+.navbar-toggler {
+  border: none;
+}
+
+.logo-img {
+    max-width: 160px;
+    height: 64px;
+}
+.mbg-light{
+    background-color:#EBF6FF !important; 
+
+}
+.navbar-nav {
+  margin-right: auto; /* Pushes the last element (submit button) to the right */
+
+
+  /* Media query for smaller viewports */
+  @media (max-width: 768px) {
+    margin-right: 0; /* Remove right margin for smaller viewports */
+    margin-left: auto; /* Move navbar links to the left for smaller viewports */
+  }
+}
+
+.demo {
+  margin-left: 7rem; /* Adjust margin as needed */
+}
+.link{
+  color: black !important;
+  font-family: "Fira Sans", sans-serif;
+  text-decoration: none;
+}
+.btnav {
+  background: linear-gradient(to top,#193054 , #21457D );
+  font-family: "Blinker", sans-serif;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.platform-menu {
+  width: 525px;
+
+}
+.rs-text{
+  padding: 10px;
+  padding-left: 26px !important;
+  padding-right: 43px !important;
+}
+.rs-menu {
+  width: 350px;
+ 
+    padding: 11px !important;
+    margin-left: 28px !important;
+
+
+}
+.dropdown-menu[data-bs-popper] {
+  top: 100%;
+  left: -23px !important;
+  margin-top: var(--bs-dropdown-spacer);
+}
+.pv{
+  width: 24px;
+  height: 24px;
+  filter: invert(26%) sepia(29%) saturate(4616%) hue-rotate(186deg) brightness(35%) contrast(95%);
+
+}
+.wpv{
+  width: 24px;
+  height: 24px;
+
+}
+.lf{
+  filter: invert(26%) sepia(29%) saturate(4616%) hue-rotate(186deg) brightness(35%) contrast(95%);
+
+}
+.po{
+  width: 24px;
+  height: 24px;
+  filter: invert(26%) sepia(29%) saturate(4616%) hue-rotate(186deg) brightness(35%) contrast(95%);
+
+}
+.to{
+  width: 24px;
+  height: 24px;
+
+}
+.platform-text{
+  /* padding: 3px; */
+
+  border-radius: 8px;
+}
+
+.platform-item:hover {
+  padding: 15px;
+
+  border-radius: 8px;
+  background-image: linear-gradient(to top, #FFFFFF, #C9E0FF);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
+}
+.rs-text:hover {
+  padding: 10px;
+  padding-left: 26px !important;
+  padding-right: 43px !important;
+
+  border-radius: 8px;
+  background-image: linear-gradient(to top, #FFFFFF, #C9E0FF);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
+}
+
+.us-item:hover {
+  padding: 8px !important;
+  /* margin-top: 3px; */
+  margin-left: -15px;
+  margin-right: 15px;
+
+  border-radius: 8px;
+  background-image: linear-gradient(to top, #FFFFFF, #C9E0FF);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
+}
+.us-item {
+  padding: 8px !important;
+  /* margin-top: 3px; */
+  margin-left: -15px;
+  margin-right: 15px;
+  border-radius: 8px;
+}
+
+.mv{
+  width: 14px;
+  height: 24px;
+  margin-right: 9px;
+  filter: invert(26%) sepia(29%) saturate(4616%) hue-rotate(186deg) brightness(35%) contrast(95%);
+
+}
+.platform-heading {
+  padding-top: 13px;
+  font-size: 16px;
+  font-weight: 400;
+  padding-bottom: 30px;
+  margin-top: -8px;
+  background-image: linear-gradient(0deg, #FFFFFF  , #C9E0FF );
+
+}
+
+.udrop {
+  font-size: 16px;
+  font-family: "Blinker", sans-serif;
+  color: #193054;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.dropara {
+  margin-top: 0;
+  font-family: "Fira Sans", sans-serif;
+  /* margin-left: 40px; */
+  font-size: 14px;
+}
+.udropara {
+  margin-top: 1rem;
+  margin-left: 2px;
+  font-size: 14px;
+  font-weight: 400 ;
+  font-family: "Fira Sans", sans-serif;
+color: gray;
+}
+.mbpara{
+  margin-left: 40px;
+  font-size: 14px;
+}
+.mnlnk{
+  margin-left: -18px;
+}
+.platform-item {
+  display: flex;
+  padding: 15px;
+
+  /* align-items: center;
+  padding-left: 41px; */
+}
+.usec-item {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  }
+  .rsec-item {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    }
+  
+.platform-item i {
+  margin-right: 10px;
+  padding: 3px;
+
+}
+
+
+.usecase-menu {
+  width: 380px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+
+  .dropdown-menu hr {
+    border: none;
+    border-top: 2px solid #ccc; /* Adjust the color and thickness as needed */
+    margin: 7px 40px; /* Adjust the margin as needed */
+  }
+  /* Add this media query to adjust styles for smaller viewports */
+@media (max-width: 768px) {
+
+  .navbar-nav .dropdown-menu {
+    position: relative; /* Add relative positioning to dropdown menu */
+    width: auto; /* Adjust width as needed */
+    margin-top: 0; /* Remove margin top */
+    box-shadow: none; /* Remove box shadow */
+    border-radius: 3px; /* Remove border radius */
+    background-color: transparent; /* Set background color */
+    border: none;
+    width: 120%;
+  }
+  .btnav{
+    margin-top: 10px;
+    margin-left: -7rem;
+  }
+  .dropara {
+    
+    margin-left: 14px;
+}
+  .nav-item{
+    margin-top: 15px;
+    border-bottom: 1px solid #ececec    ;
+  }
+  .demo {
+    border-bottom: none;
+    margin-left: 8rem;
+}
+ /* .logo-img{
+  margin-left: -1.9rem;
+ } */
+ 
+ .navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow:none;
+}
+}
+
+
+
+
+
+.back-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+
+.dropdown-content {
+  padding: 20px;
+  background-color:#EBF6FF; /* Match the navbar background */
+  position: absolute; /* or fixed, depending on your design */
+  top: 0; /* Adjust according to your navbar height */
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* To make sure it appears above other elements */
+ 
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between; /* Align title and icon */
+  align-items: center; /* Center vertically */
+}
+
+.chevron-icon {
+  cursor: pointer; /* Change cursor to pointer */
+  color:black; /* Style the icon color */
+  font-size: 1.4rem; /* Adjust size as needed */
+}
+
+.dropdown-item {
+  margin-bottom: 10px; /* Add space between items */
+}
+
+.dropara {
+  color: gray; /* Style as needed */
+  font-size: 13px; /* Adjust size as needed */
+  font-weight: 400;
+}
+.navbar {
+  padding: 1rem; /* Adjust padding as needed */
+}
+
+.nav-fluid {
+  display: flex;
+  justify-content: space-between; /* Reduce gap between logo and nav content */
+  align-items: center; /* Center items vertically */
+  max-width: 1200px; /* Set a max-width to prevent stretching */
+  margin: 0 auto; /* Center the container */
+}
+
+.navbar-collapse {
+  flex-grow: 0; /* Prevents the navbar-collapse from taking extra space */
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center; /* Center nav items */
+  margin-left: auto; /* Pushes the nav items to the right */
+}
+
+.logo-img {
+  margin-right: 1rem; /* Reduce the right margin to decrease the gap */
+}
+
+
+
+/* @media (max-width: 768px) {
+  .container-fluid {
+    flex-direction: column;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+} */
