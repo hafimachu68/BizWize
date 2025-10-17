@@ -1,9 +1,13 @@
 import React, { useState, useRef, useImperativeHandle, forwardRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
-import freezoneImg from '../images/cb1.jpg';
-import mainlandImg from '../images/cbg2.jpg';
-import offshoreImg from '../images/cbg3.jpg';
+import freezoneImg from '../images/freez1.jpeg';
+import mainlandImg from '../images/freez2.jpeg';
+import offshoreImg from '../images/freez3.jpeg';
+import biz1 from '../images/freez4.jpeg';
+import biz2 from '../images/freez5.jpeg';
+
+
 import './HeroSection.css';
 
 const HeroSection = forwardRef((props, ref) => {
@@ -39,10 +43,17 @@ const HeroSection = forwardRef((props, ref) => {
 
   const slides = [
     {
-      image: freezoneImg,
-      title: 'Free Zone Company Setup',
-      subtext: 'DMCC, RAKEZ, SHAMS & more',
-      price: 'From AED 5,750',
+      image: biz1,
+      // title: 'Free Zone Company Setup',
+      // subtext: 'DMCC, RAKEZ, SHAMS & more',
+      // price: 'From AED 5,750',
+      features: ['100% Ownership', 'Zero Tax', 'Flexible Visas']
+    },
+    {
+      image: biz2,
+      // title: 'Free Zone Company Setup',
+      // subtext: 'DMCC, RAKEZ, SHAMS & more',
+      // price: 'From AED 5,750',
       features: ['100% Ownership', 'Zero Tax', 'Flexible Visas']
     },
     {
