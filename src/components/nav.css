@@ -1,5 +1,7 @@
 .navbar {
   padding: 1rem 2rem; /* Adjust padding as needed */
+  background-color:  #000000;
+
 }
 
 /* Set the maximum width for the list item */
@@ -50,7 +52,7 @@
 
 .logo-img {
     max-width: 160px;
-    height: 64px;
+    height: 80px;
 }
 .mbg-light{
     background-color:#EBF6FF !important; 
@@ -240,7 +242,9 @@ color: gray;
   padding: 3px;
 
 }
-
+ .nav-link {
+    color:white !important;
+}
 
 .usecase-menu {
   width: 380px;

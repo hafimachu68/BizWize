@@ -1,6 +1,6 @@
 import React from 'react'; 
 import './nav.css';
-import group8 from '../images/Logo13-min.png';
+import group8 from '../images/group87.png';
 import pv from '../images/pv.png'; // Import your logo file
 import web from '../images/wformg.png'; // Import your logo file
 import dument from '../images/docub.png'; // Import your logo file
@@ -12,7 +12,7 @@ import Wiki from '../images/wiki.png'; // Import your logo file
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light ">
       <div className="container-fluid nav-fluid">
         <a className="navbar-brand log" href="/">
           <img className="logo-img mr-3" src={group8} alt="" width="268" height="52" />
