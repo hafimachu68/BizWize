@@ -1,4 +1,4 @@
-/* HeroSection.css
+HeroSection.css
 .hero-section {
   position: relative;
   height: 100vh;
@@ -15,7 +15,8 @@
 .hero-image {
   width: 100%;
   height: 100vh;
-  object-fit: cover;
+  object-fit: contain;
+background: radial-gradient( #ffffff 50%, #0d1f51 80%);
 }
 
 .poster-caption {
@@ -31,7 +32,7 @@
   font-weight: 700;
   color: #ffffff;
 }
-/* .poster-caption .subtext,
+ .poster-caption .subtext,
 .poster-caption .price,
 .poster-caption .features li {
   font-size: 1.1rem;
@@ -50,15 +51,15 @@
 
 .hero-form {
   position: absolute;
-  top: 50%;
-  right: 5%;
+  top: 73%;
+  right: 2%;
   transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(8px);
   padding: 2rem;
   border-radius: 12px;
   color: white;
-  width: 320px;
+  width: 315px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
@@ -116,10 +117,10 @@
   transform: translateY(-50%);
   bottom: auto;
   margin: 1px;
-} */
+}
 
 /* === Hero Section Layout === */
-.hero-section {
+/* .hero-section {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -136,21 +137,20 @@
   height: 100%;
 }
 
-/* === Carousel (Left Side) === */
 .carousel-section {
   width: 75%;
+  height: auto;
   position: relative;
 }
 
 .carousel-container,
 .carousel-container img.hero-image {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   transition: transform 2s ease-in-out, opacity 2s ease-in-out;
 }
 
-/* Adds smooth transition effect between slides */
 .carousel-item.active img {
   transform: scale(1.05);
   opacity: 1;
@@ -159,7 +159,6 @@
   opacity: 0.9;
 }
 
-/* === Form (Right Side) === */
 .form-section {
   width: 25%;
   background: linear-gradient(135deg, #ffffff 0%, #3cb4fa 100%);
@@ -232,7 +231,6 @@
   transform: translateY(-2px);
 }
 
-/* === Toast === */
 .toast {
   margin-top: 10px;
   text-align: center;
@@ -243,7 +241,6 @@
   font-weight: 500;
 }
 
-/* === Call Now Button (Improved Look + Animation) === */
 .call-now {
   position: fixed;
   bottom: 20px;
@@ -269,7 +266,6 @@
   transform: scale(1.05);
 }
 
-/* Pulse and glow animation */
 @keyframes pulseGlow {
   0% {
     box-shadow: 0 0 0 0 rgba(255, 122, 0, 0.6);
@@ -282,7 +278,6 @@
   }
 }
 
-/* === Responsive (Mobile) === */
 @media (max-width: 992px) {
   .hero-content {
     flex-direction: column;
@@ -291,7 +286,6 @@
   .carousel-section,
   .form-section {
     width: 100%;
-    height: 50%;
   }
 
   .form-section {
@@ -305,4 +299,4 @@
     font-size: 0.9rem;
     padding: 0.7rem 1rem;
   }
-}
+} */
