@@ -1,6 +1,10 @@
 .navbar {
   padding: 1rem 2rem; /* Adjust padding as needed */
-  background-color:  #000000;
+
+  background: linear-gradient(to right, rgba(115, 196, 249, 0.37), rgba(143, 199, 232, 0.56));
+
+
+
 
 }
 
@@ -242,9 +246,9 @@ color: gray;
   padding: 3px;
 
 }
- .nav-link {
+ /* .nav-link {
     color:white !important;
-}
+} */
 
 .usecase-menu {
   width: 380px;
