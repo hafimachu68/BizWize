@@ -1,14 +1,48 @@
+
+/* WhatsApp floating button */
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
+  bottom: 25px; /* works well on mobile too */
   right: 20px;
-  background-color: #25d366;
-  color: white;
-  font-size: 1.5rem;
-  padding: 0.75rem 1rem;
+  z-index: 9999;
+  background-color: #25D366;
+  padding: 12px;
   border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  z-index: 999;
-  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  animation: bounce 2.5s infinite; /* subtle bounce */
+}
+
+/* Hover & tap effect */
+.whatsapp-float:hover,
+.whatsapp-float:active {
+  transform: scale(1.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* WhatsApp icon inside */
+.whatsapp-float img {
+  width: 50px;  /* same size for mobile and desktop */
+  height: 50px;
+  display: block;
+}
+
+/* Optional: subtle bounce animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Remove shrinking on mobile */
+@media (max-width: 600px) {
+  .whatsapp-float {
+    bottom: 20px; /* slightly higher on small screens if needed */
+    right: 15px;
+    padding: 12px; /* keep same size */
+  }
+
+  .whatsapp-float img {
+    width: 50px;  /* maintain same size */
+    height: 50px;
+  }
 }

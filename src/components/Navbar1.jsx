@@ -1,12 +1,8 @@
 import React from 'react'; 
 import './nav.css';
 import group8 from '../images/group87.png';
-import pv from '../images/pv.png'; // Import your logo file
+import { Briefcase, Users2, Megaphone, ClipboardList, Building2, Calculator } from 'lucide-react'; // Import icons
 import web from '../images/wformg.png'; // Import your logo file
-import dument from '../images/docub.png'; // Import your logo file
-import report from '../images/reportd.png'; // Import your logo file
-import api from '../images/apid.png'; // Import your logo file
-import mob from '../images/mobd.png'; // Import your logo file
 import blog from '../images/blog.png'; // Import your logo file
 import Wiki from '../images/wiki.png'; // Import your logo file
 
@@ -31,101 +27,98 @@ function Navbar() {
                   <div className="row">
                     <div className="col-6">
                       <li className="platform-item my-2">
-                        <a className='link' href="/platform">
+                        <a className="link" href="/business-setup">
                           <div className="platform-text">
                             <h6 className="hedrop">
-                              <i><img className='po' src={pv} alt="" /></i>Platform Overview
+                              <i><Briefcase size={24} className="me-2" /></i>
+                              Business Set up
                             </h6>
-                            <p className='dropara'>
-                              Build custom applications using Low-code technology empowering your business
+                            <p className="dropara">
+                              End-to-end support for company formation, licensing, and government approvals in the UAE.
                             </p>
                           </div>
                         </a>
                       </li>
                     </div>
+
                     <div className="col-6">
                       <li className="platform-item my-2">
-                        <a className='link' href="/webform">
+                        <a className="link" href="/hr-solutions">
                           <div className="platform-text">
                             <h6 className="hedrop">
-                              <i><img className='pv' src={web} alt="" /></i>Web Forms
+                              <i><Users2 size={24} className="me-2" /></i>
+                              HR Solutions
                             </h6>
-                            <p className='dropara'>
-                              Create powerful multi-lingual, multi-currency enterprise web forms.
-                            </p>
-                          </div>
-                        </a>
-                      </li>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-6">
-                      <li className="platform-item my-2">
-                        <a className='link' href="/documents">
-                          <div className="platform-text">
-                            <h6 className="hedrop">
-                              <i><img className='pv' src={dument} alt="" /></i>Documents
-                            </h6>
-                            <p className='dropara'>
-                              A document management system that seamlessly integrates into your business process.
-                            </p>
-                          </div>
-                        </a>
-                      </li>
-                    </div>
-                    <div className="col-6">
-                      <li className="platform-item my-2">
-                        <a className='link' href="/report">
-                          <div className="platform-text">
-                            <h6 className="hedrop">
-                              <i><img className='pv' src={report} alt="" /></i>Reports
-                            </h6>
-                            <p className='dropara'>
-                              Gain instant access to actionable insights, putting data at your fingertips for informed decision-making.
+                            <p className="dropara">
+                              Comprehensive HR outsourcing, recruitment, and employee management services tailored to your business.
                             </p>
                           </div>
                         </a>
                       </li>
                     </div>
                   </div>
+
                   <div className="row">
                     <div className="col-6">
                       <li className="platform-item my-2">
-                        <a className='link' href="/api">
+                        <a className="link" href="/digital-marketing">
                           <div className="platform-text">
                             <h6 className="hedrop">
-                              <i><img className='pv' src={api} alt="" /></i>APIs
+                              <i><Megaphone size={24} className="me-2" /></i>
+                              Digital Marketing
                             </h6>
-                            <p className='dropara'>
-                              Efficiently integrate third-party applications into your workflow using our futuristic API builder.
+                            <p className="dropara">
+                              Boost your online visibility with expert social media, SEO, and paid ad campaigns that deliver results.
                             </p>
                           </div>
                         </a>
                       </li>
                     </div>
+
                     <div className="col-6">
                       <li className="platform-item my-2">
-                        <a className='link' href="/mobileapp">
+                        <a className="link" href="/management-consultancy">
                           <div className="platform-text">
                             <h6 className="hedrop">
-                              <i><img className='mv' src={mob} alt="" /></i>Mobile Apps
+                              <i><ClipboardList size={24} className="me-2" /></i>
+                              Management Consultancy
                             </h6>
-                            <p className='dropara'>
-                              Transform your organization's internal processes with our low-code mobile app platform.
+                            <p className="dropara">
+                              Strategic guidance to optimize operations, improve efficiency, and ensure sustainable business growth.
                             </p>
                           </div>
                         </a>
                       </li>
                     </div>
+                  </div>
+
+                  <div className="row">
                     <div className="col-6">
                       <li className="platform-item my-2">
-                        <a className='link' href="/chatbot">
+                        <a className="link" href="/facility-management">
                           <div className="platform-text">
                             <h6 className="hedrop">
-                              <i><img className='pv' src={web} alt="" /></i>Chat Bots
+                              <i><Building2 size={24} className="me-2" /></i>
+                              Facility Management
                             </h6>
-                            <p className='dropara'>
-                              Elevate customer interactions with our low-code chatbot tool.
+                            <p className="dropara">
+                              Reliable facility maintenance, cleaning, and support services for commercial and residential properties.
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                    </div>
+
+                    <div className="col-6">
+                      <li className="platform-item my-2">
+                        <a className="link" href="/accounting-bookkeeping">
+                          <div className="platform-text">
+                            <h6 className="hedrop">
+                              <i><Calculator size={24} className="me-2" /></i>
+                              Accounting & Bookkeeping
+                            </h6>
+                            <p className="dropara">
+                              Accurate, compliant financial management and bookkeeping for smooth business operations.
                             </p>
                           </div>
                         </a>
@@ -136,7 +129,7 @@ function Navbar() {
               </ul>
             </li>
 
-            <li className="nav-item dropdown mx-4">
+            {/* <li className="nav-item dropdown mx-4">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Usecases
               </a>
@@ -176,13 +169,13 @@ function Navbar() {
                   </a>
                 </li>
               </ul>
-            </li>
+            </li> */}
 
             <li className="nav-item mx-4">
               <a className="nav-link active" aria-current="page" href="/about">About Us</a>
             </li>
             <li className="nav-item mx-4">
-              <a className="nav-link" href="#">Pricing</a>
+              <a className="nav-link" href="/contact">Contact</a>
             </li>
             <li className="nav-item dropdown mx-4">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -220,8 +213,8 @@ function Navbar() {
             </li>
 
             <li className="nav-item demo">
-              <a href="https://zcal.co/sureba73">
-                <button className="btn btnav text-light" type="submit">Book A Demo</button>
+              <a href="">
+                <button className="btn btnav text-light" type="submit">Get Free Consultation</button>
               </a>
             </li>
           </ul>

@@ -271,3 +271,20 @@
   opacity: 1;
   transform: translateY(0);
 }
+.service-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #0d1f51, #3ab6ff);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.service-btn:hover {
+  background: linear-gradient(135deg, #3ab6ff, #0d1f51);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(13, 31, 81, 0.3);
+}

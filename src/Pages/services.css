@@ -1,0 +1,61 @@
+.service-page {
+  font-family: 'Poppins', sans-serif;
+  color: #0d1f51;
+  padding: 2rem;
+  background: #f5f9ff;
+  min-height: 100vh;
+}
+
+.service-hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #3ab6ff, #59ce8f);
+  color: #fff;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.service-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.service-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.service-hero i {
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.2;
+}
+
+.service-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.service-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #3ab6ff;
+}
+
+.service-content ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+.service-content ul li {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
