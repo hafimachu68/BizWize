@@ -212,11 +212,15 @@ function Navbar() {
               </ul>
             </li>
 
-            <li className="nav-item demo">
-              <a href="/contact">
-                <button className="btn btnav text-light" type="submit">Get Free Consultation</button>
-              </a>
-            </li>
+          <li className="nav-item demo">
+  <a href="/digital-marketing" className="digiwize-link">
+    <button className="btn btnavdigi text-light" type="submit">
+      <span className="digi">Digi</span><span className="wize">Wize</span>
+      <div className="subtext">THE DIGITAL MARKETING COMPANY</div>
+    </button>
+  </a>
+</li>
+
           </ul>
         </div>
       </div>
