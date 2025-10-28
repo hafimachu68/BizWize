@@ -213,7 +213,7 @@ function Navbar() {
             </li>
 
             <li className="nav-item demo">
-              <a href="">
+              <a href="/contact">
                 <button className="btn btnav text-light" type="submit">Get Free Consultation</button>
               </a>
             </li>

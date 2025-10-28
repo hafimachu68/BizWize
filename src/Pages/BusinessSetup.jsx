@@ -19,8 +19,19 @@ export default function BusinessSetup() {
         </div>
       </section>
 
-     <section className="service-overview">
+<section className="service-overview">
   <h2><Briefcase size={32}/> What We Offer</h2>
+
+  {/* Animated Background */}
+  <div className="service-bg-anim">
+    <div className="circle"></div>
+    <div className="circle"></div>
+    <div className="circle"></div>
+    <div className="circle"></div>
+    <div className="circle"></div>
+  </div>
+
+  {/* Card Grid */}
   <div className="service-grid">
     {[
       {
@@ -63,6 +74,7 @@ export default function BusinessSetup() {
     ))}
   </div>
 </section>
+
 
 
       {/* Why Choose Us */}

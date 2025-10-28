@@ -1,0 +1,103 @@
+.thankyou-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #4A90E2, #E8F9FD); /* Blue gradient */
+  color: #000;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+/* Animated Background */
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.animated-bg .circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  animation: float 15s infinite;
+}
+
+.animated-bg .circle:nth-child(1) {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 20%;
+  animation-duration: 18s;
+}
+.animated-bg .circle:nth-child(2) {
+  width: 300px;
+  height: 300px;
+  bottom: 15%;
+  right: 25%;
+  animation-duration: 20s;
+}
+.animated-bg .circle:nth-child(3) {
+  width: 150px;
+  height: 150px;
+  top: 40%;
+  right: 10%;
+  animation-duration: 16s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-50px) rotate(180deg); }
+  100% { transform: translateY(0px) rotate(360deg); }
+}
+
+/* Content Styling */
+.thankyou-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.thankyou-icon {
+  color: #4A90E2; /* Blue icon */
+  margin-bottom: 1rem;
+}
+
+.thankyou-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.thankyou-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.back-home-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(90deg, #4A90E2, #E8F9FD); /* Blue gradient button */
+  color: #000;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-home-btn:hover {
+  background: linear-gradient(90deg, #E8F9FD, #4A90E2);
+  transform: translateY(-3px);
+}

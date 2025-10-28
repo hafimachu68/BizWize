@@ -20,7 +20,8 @@ export default function Contact() {
         <div className="hero-content">
           <h1>Let’s <span>Connect & Grow</span></h1>
           <p>
-            BizWize — Your trusted partner for seamless business setup and success in the UAE. Let’s turn your ideas into impact!
+            BizWize — Your trusted partner for seamless business setup and success in the UAE. 
+            Let’s turn your ideas into impact!
           </p>
         </div>
         <img src={bannerImg} alt="BizWize Office" className="hero-image" />
@@ -59,16 +60,26 @@ export default function Contact() {
         <p className="form-intro">
           Let’s start the conversation. Our BizWize experts are ready to assist your next big move.
         </p>
-        <form className="contact-form">
+
+        {/* ✅ FormSubmit Integration */}
+        <form
+          className="contact-form"
+          action="https://formsubmit.co/youremail@example.com"  // 👈 replace with your email
+          method="POST"
+        >
+          {/* Optional: disable captcha & redirect */}
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://www.bizwizeuae.com/thankyou" />
+
           <div className="form-row">
-            <input type="text" placeholder="Full Name" required />
-            <input type="email" placeholder="Email Address" required />
+            <input type="text" name="Full Name" placeholder="Full Name" required />
+            <input type="email" name="Email" placeholder="Email Address" required />
           </div>
           <div className="form-row">
-            <input type="text" placeholder="Phone Number" required />
-            <input type="text" placeholder="Company Name" />
+            <input type="text" name="Phone" placeholder="Phone Number" required />
+            <input type="text" name="Company" placeholder="Company Name" />
           </div>
-          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
           <button type="submit" className="submit-btn">Send Message</button>
         </form>
       </section>

@@ -13,6 +13,7 @@ import DigitalMarketing from './Pages/DigitalMarketing';
 import ManagementConsultancy from './Pages/ManagementConsultancy';
 import FacilityManagement from './Pages/FacilityManagement';
 import AccountingBookkeeping from './Pages/AccountingBookkeeping';
+import ThankYou from './Pages/ThankYou';
 // For now comment these if not created yet
 // import FreeZone from './pages/FreeZone';
 // import Mainland from './pages/Mainland';
@@ -37,6 +38,8 @@ function App() {
 
            <Route path="/about" element={<AboutUs/>} />
            <Route path="/contact" element={<Contact/>} />
+                   <Route path="/thankyou" element={<ThankYou/>} />
+
 
 
           {/* Add more routes later */}
