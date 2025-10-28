@@ -1,0 +1,264 @@
+/* General */
+.facility-page {
+  font-family: 'Poppins', sans-serif;
+  color: #1a1a1a;
+  background: #f7f9fc;
+}
+
+/* Hero */
+.facility-hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background-image: url('https://images.unsplash.com/photo-1593541060691-0aa5d5d062c2?auto=format&fit=crop&w=1500&q=80');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 29, 70, 0.65);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  padding: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #38bdf8, #1a1d70);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #e6f6ff;
+}
+
+/* Floating Boxes */
+.floating-box {
+  position: absolute;
+  border-radius: 20px;
+  opacity: 0.3;
+  animation: floatBox 8s infinite ease-in-out alternate;
+  z-index: 1;
+}
+
+.box1 {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 5%;
+  background: linear-gradient(135deg, #38bdf8, #1a1d70);
+}
+
+.box2 {
+  width: 250px;
+  height: 250px;
+  bottom: 10%;
+  right: 10%;
+  background: linear-gradient(135deg, #299acd, #1a1d70);
+}
+
+.box3 {
+  width: 180px;
+  height: 180px;
+  top: 50%;
+  left: 60%;
+  background: linear-gradient(135deg, #1a1d70, #38bdf8);
+}
+
+@keyframes floatBox {
+  0% { transform: translateY(0) rotate(0deg); opacity:0.3; }
+  50% { transform: translateY(-30px) rotate(10deg); opacity:0.5; }
+  100% { transform: translateY(0) rotate(0deg); opacity:0.3; }
+}
+
+/* Sections */
+.facility-about,
+.facility-services,
+.facility-benefits {
+  padding: 80px 10%;
+  text-align: center;
+  position: relative;
+}
+
+.facility-about h2,
+.facility-services h2,
+.facility-benefits h2 {
+  font-size: 2.2rem;
+  color: #1a1d70;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.facility-about p {
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* Services */
+.facility-services {
+  background: linear-gradient(120deg, #f0f9ff, #d0ebff);
+  border-radius: 20px;
+}
+
+.service-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
+  transition: all 0.4s ease;
+  padding: 15px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+}
+
+.service-detail:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(56,189,248,0.4);
+}
+
+.service-detail .service-icon {
+  font-size: 48px;
+  flex-shrink: 0;
+}
+
+.neon-icon {
+  color: #38bdf8;
+  text-shadow: 0 0 5px #38bdf8, 0 0 10px #1a1d70, 0 0 20px #38bdf8;
+}
+
+/* Service Text */
+.service-detail h3 {
+  font-size: 1.3rem;
+  color: #1a1d70;
+  margin-bottom: 8px;
+}
+
+.service-detail p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Benefits */
+.facility-benefits {
+  background: linear-gradient(120deg, #d0ebff, #f0f9ff);
+  border-radius: 20px;
+}
+
+.facility-benefits ul {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.facility-benefits li {
+  font-size: 1rem;
+  line-height: 2;
+  color: #1a1d70;
+  text-align: left;
+  padding-left: 25px;
+  position: relative;
+}
+
+.facility-benefits li::before {
+  position: absolute;
+  left: 0;
+}
+
+/* CTA */
+.facility-cta {
+  background: linear-gradient(135deg, #1a1d70, #299acd);
+  color: #fff;
+  padding: 80px 10%;
+  text-align: center;
+ 
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.facility-cta .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  background: linear-gradient(to right, #2563eb, #38bdf8);
+  color: #fff;
+  font-family: "Blinker", sans-serif;
+  font-weight: 600;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 999px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 15px rgba(255,255,255,0.7), 0 6px 18px rgba(50,185,246,0.5);
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(to right, #1a1d70, #299acd);
+  box-shadow: 0 0 25px rgba(255,255,255,0.9), 0 8px 25px rgba(50,185,246,0.6);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes animateSlide {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.animate-slide {
+  animation: animateSlide 1.2s ease forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .facility-about, .facility-services, .facility-benefits, .facility-cta {
+    padding: 60px 6%;
+  }
+  .service-detail {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .service-detail .service-icon {
+    margin-bottom: 15px;
+  }
+}
