@@ -17,7 +17,7 @@ export default function DigitalMarketing() {
             DigiWize — the digital powerhouse under <strong>BizWize UAE</strong> — specializes in creating brand success stories through strategy,
             innovation, and results-driven marketing. We bring visibility, engagement, and conversions to your business.
           </p>
-          <button className="cta-btn">Let’s Grow Your Brand</button>
+          <a href="/contact"><button className="cta-btn btnav text-light ">Let’s Grow Your Brand</button></a>
         </div>
       </section>
 
@@ -120,7 +120,9 @@ export default function DigitalMarketing() {
         <p>
           Join hundreds of businesses that have scaled their digital presence with our strategic expertise.
         </p>
-        <button className="cta-btn">Book Your Free Consultation</button>
+       <a href="/contact">  <button className="cta-btn"> 
+Book Your Free Consultation
+</button></a> 
       </section>
 
       <WhatsAppButton />
