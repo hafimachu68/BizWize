@@ -64,7 +64,7 @@ export default function Contact() {
         {/* ✅ FormSubmit Integration */}
         <form
           className="contact-form"
-          action="https://formsubmit.co/youremail@example.com"  // 👈 replace with your email
+          action="https://formsubmit.co/info@bizwizeuae.com"  // 👈 replace with your email
           method="POST"
         >
           {/* Optional: disable captcha & redirect */}
