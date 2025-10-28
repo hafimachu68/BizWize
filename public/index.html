@@ -10,17 +10,45 @@
     />
     <meta name="p:domain_verify" content="73a92a990ccf7a18194df6fb64f679eb" />
 
-    <!-- ✅ Google tag (gtag.js) -->
+    <!-- ✅ 1. Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-KL5GCLFF');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- ✅ Google Analytics (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHVV6B8WMR"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag('js', new Date());
       gtag('config', 'G-CHVV6B8WMR');
     </script>
   </head>
 
   <body>
+    <!-- ✅ 2. Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KL5GCLFF"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div id="root"></div>
   </body>
 </html>
