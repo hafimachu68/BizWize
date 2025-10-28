@@ -1,0 +1,198 @@
+/* General Styling */
+.management-page {
+  font-family: 'Poppins', sans-serif;
+  color: #1a1a1a;
+  background: #f9fbff;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.management-hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  background-image: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1500&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 29, 70, 0.6); /* Dark overlay for text readability */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #38bdf8, #1a1d70);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #e6f6ff;
+}
+
+
+/* CTA Buttons */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cta-btn {
+  background: linear-gradient(to right, #2563eb, #38bdf8);
+  color: #fff;
+  font-family: "Blinker", sans-serif;
+  font-weight: 600;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 999px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6), 0 6px 18px rgba(50, 185, 246, 0.4);
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(to right, #1a1d70, #299acd);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.9), 0 8px 25px rgba(50, 185, 246, 0.6);
+}
+
+.cta-btn:active {
+  transform: scale(0.97);
+}
+
+/* Services Section */
+.management-services {
+  padding: 80px 10%;
+  text-align: center;
+  background: #fff;
+}
+
+.management-services h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a1d70;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtext {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* Service Cards */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 30px 20px;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 10px rgba(41, 154, 205, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(50, 185, 246, 0.5), 0 8px 25px rgba(26, 29, 112, 0.3);
+  background: linear-gradient(to bottom right, #f0f9ff, #e0f2fe);
+}
+
+.service-card .icon {
+  color: #299acd;
+  font-size: 48px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 10px rgba(41, 154, 205, 0.5));
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  color: #1a1d70;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.management-cta {
+  background: linear-gradient(to right, #1a1d70, #299acd);
+  padding: 80px 10%;
+  text-align: center;
+  color: #fff;
+  margin-top: 60px;
+  border-radius: 20px;
+}
+
+.management-cta h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.management-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .management-services, .management-cta {
+    padding: 60px 6%;
+  }
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
