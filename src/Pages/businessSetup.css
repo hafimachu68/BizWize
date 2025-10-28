@@ -1,0 +1,277 @@
+/* General Page Styling */
+.business-setup-page {
+  font-family: 'Poppins', sans-serif;
+  color: #1a1a1a;
+  background-color: #f9fafc;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.business-hero {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.business-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 20, 40, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #e8f9fd;
+}
+
+.cta-btn {
+  background: linear-gradient(135deg, #59CE8F, #2bb673);
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.cta-btn:hover {
+  background: linear-gradient(135deg, #3ea76a, #1e8a55);
+  transform: translateY(-3px);
+}
+
+/* Service Overview Section */
+.service-overview {
+  padding: 80px 10%;
+  text-align: center;
+  background: #ffffff;
+}
+
+.service-overview h2 {
+  font-size: 2.2rem;
+  color: #0d1f51;
+  margin-bottom: 40px;
+}
+
+/* Flip Card Container */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  perspective: 1200px;
+}
+
+/* Flip Card Core */
+.flip-card {
+  background: transparent;
+  width: 100%;
+  height: 230px;
+  border-radius: 16px;
+  perspective: 1000px;
+  position: relative;
+  transition: transform 0.8s ease-in-out;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Neon Glow + Flip */
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+  box-shadow: 0 0 20px #59CE8F, 0 0 40px rgba(89,206,143,0.6);
+}
+
+/* Front & Back Faces */
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+}
+
+/* Front */
+.flip-front {
+  background: linear-gradient(135deg, #e8f9fd 0%, #c4f4e0 50%, #ffffff 100%);
+  color: #0d1f51;
+  border: 1px solid rgba(13, 31, 81, 0.1);
+  box-shadow: 0 6px 15px rgba(13, 31, 81, 0.1);
+  border-radius: 16px;
+  transition: all 0.4s ease;
+}
+
+/* Add a little depth when hovering before flip */
+.flip-card:hover .flip-front {
+  box-shadow: 0 0 20px rgba(89, 206, 143, 0.4),
+              0 0 40px rgba(232, 249, 253, 0.6);
+  transform: scale(1.03);
+}
+
+.flip-front h3 {
+  margin-top: 10px;
+  background: linear-gradient(90deg, #0d1f51, #59ce8f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+.fl{
+  margin-left: 11rem;
+}
+
+/* Back */
+.flip-back {
+  background: #0d1f51;
+  color: #e8f9fd;
+  transform: rotateY(180deg);
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: inset 0 0 20px rgba(89,206,143,0.4);
+}
+
+/* Subtle Neon Hover Pulse */
+.flip-card:hover {
+  animation: neonPulse 1.2s infinite alternate;
+}
+
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(89,206,143,0.4);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(89,206,143,0.8);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flip-card {
+    height: 200px;
+  }
+}
+
+
+/* Why Choose Us */
+.why-choose {
+  background: linear-gradient(135deg, #ffffff, #e3ecf9);
+  padding: 80px 10%;
+  text-align: center;
+}
+.why-choose h2 {
+  font-size: 2rem;
+  color: #0d1f51;
+  margin-bottom: 20px;
+}
+.why-choose ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+}
+.why-choose li {
+  margin: 8px 0;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #0d1f51, #122b6f);
+  color: #ffffff;
+  padding: 70px 10%;
+  text-align: center;
+}
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+.cta-section .cta-btn {
+  background: linear-gradient(135deg, #FF1E00, #ff6b4a);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .service-overview, .why-choose, .cta-section {
+    padding: 50px 6%;
+  }
+}
+/* Service Grid Layout */
+.service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 40px;
+  perspective: 1200px;
+  margin-left: 5rem;
+}
+
+/* Each Flip Card */
+.flip-card {
+  flex: 1 1 260px;
+  max-width: 260px;
+}
+
+/* Center the last 2 cards (4th and 5th) */
+.flip-card:nth-child(4),
+.flip-card:nth-child(5) {
+  margin-left: 6rem; /* adjust to visually center */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .flip-card:nth-child(4),
+  .flip-card:nth-child(5) {
+    margin-left: 0; /* remove margin on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .service-grid {
+    justify-content: center;
+  }
+  .flip-card {
+    flex: 1 1 80%;
+    max-width: none;
+    margin-left: 0 !important;
+  }
+}

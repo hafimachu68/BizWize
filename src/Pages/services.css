@@ -59,3 +59,183 @@
   margin-bottom: 0.8rem;
   font-size: 1.1rem;
 }
+
+
+/* ===============================
+   BUSINESS SETUP PAGE STYLES
+   =============================== */
+.biz-service-page {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+/* Hero Banner */
+.biz-service-hero {
+  position: relative;
+  height: 70vh;
+  background: url('../images/freez2.jpeg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.biz-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.biz-hero-text {
+  position: relative;
+  max-width: 800px;
+  z-index: 1;
+  padding: 2rem;
+  animation: fadeInUp 1.5s ease;
+}
+
+.biz-hero-text h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.biz-hero-text p {
+  font-size: 1.2rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+/* Intro Section */
+.biz-intro-section {
+  max-width: 900px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.biz-intro-section h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.biz-intro-section p {
+  color: #475569;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Service Grid */
+.biz-service-list {
+  padding: 4rem 2rem;
+  background: #ffffff;
+}
+
+.biz-service-list h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+.biz-service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.biz-card {
+  background: #f1f5f9;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.biz-card:hover {
+  background: #1e3a8a;
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
+}
+
+.biz-card .icon {
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+}
+
+.biz-card:hover .icon {
+  color: #fff;
+}
+
+.biz-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.biz-card p {
+  font-size: 1rem;
+  color: inherit;
+  line-height: 1.5;
+}
+
+/* CTA Section */
+.biz-cta {
+  background: linear-gradient(135deg, #1e3a8a, #0f172a);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.biz-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.biz-cta p {
+  font-size: 1.1rem;
+  color: #e2e8f0;
+  margin-bottom: 2rem;
+}
+
+.biz-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  color: #1e3a8a;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.biz-btn:hover {
+  background: #facc15;
+  color: #111827;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

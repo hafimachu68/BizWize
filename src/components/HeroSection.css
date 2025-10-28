@@ -1,122 +1,132 @@
-HeroSection.css
-.hero-section {
+/* ==========================
+   Custom Hero Section
+   ========================== */
+.custom-hero-section {
   position: relative;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
-  color: white;
+  background: #000;
 }
 
-.carousel-container {
+/* Carousel Wrapper */
+.custom-carousel {
   width: 100%;
   height: 100vh;
   position: relative;
+  z-index: 1;
 }
 
-.hero-image {
+/* Each carousel slide */
+.custom-carousel-item {
+  position: relative;
+  height: 100vh;
+}
+
+/* Actual image (fill screen properly) */
+.custom-hero-img {
   width: 100%;
   height: 100vh;
-  object-fit: contain;
-background: radial-gradient( #ffffff 50%, #0d1f51 80%);
+  object-fit: cover; /* fills screen perfectly */
+  filter: brightness(80%);
+  display: block;
 }
 
-.poster-caption {
-  background: rgba(0, 0, 0, 0.6); 
-  border-radius: 16px;
-  text-align: left; 
-  max-width: 600px;
-  margin: 0 auto; 
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); 
-}
-.poster-caption h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ffffff;
-}
- .poster-caption .subtext,
-.poster-caption .price,
-.poster-caption .features li {
-  font-size: 1.1rem;
-  color: #f1f5f9;
-  font-weight: 500;
-} 
-
-.poster-caption .features {
-  padding-left: 1rem;
-  list-style: none;
-}
-
-.poster-caption .features li {
-  margin-bottom: 0.3rem;
-}
-
-.hero-form {
+/* Form Styling */
+.custom-hero-form {
   position: absolute;
-  top: 73%;
-  right: 2%;
+  top: 50%;
+  right: 5%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 16px;
+  width: 320px;
   color: white;
-  width: 315px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  z-index: 10;
+  z-index: 5;
+  animation: fadeInUp 1s ease-out;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
 }
 
-.hero-form input,
-.hero-form textarea {
+/* Input Fields */
+.custom-hero-form input,
+.custom-hero-form textarea {
   width: 100%;
   margin-bottom: 1rem;
   padding: 0.75rem;
   border: none;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.9);
-  color: #0f172a;
+  color: #000;
+  font-size: 0.95rem;
 }
 
-.hero-form button {
+/* Submit Button */
+.custom-hero-form button {
   width: 100%;
   background: #1e3a8a;
   color: white;
-  padding: 0.75rem;
+  padding: 0.8rem;
   border: none;
   border-radius: 8px;
   font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
 }
 
-.toast {
+.custom-hero-form button:hover {
+  background: #0f1f64;
+  transform: scale(1.05);
+}
+
+/* Success Toast */
+.custom-toast {
   margin-top: 1rem;
-  background: #16a34a;
+  background: #22c55e;
   color: white;
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-.call-now {
+/* Call Now Floating Button */
+.custom-call-now {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  bottom: 25px;
+  left: 25px;
   background: #1e3a8a;
-  padding: 0.75rem 1rem;
+  color: white;
+  padding: 0.8rem 1rem;
   border-radius: 30px;
   font-size: 1rem;
   cursor: pointer;
-  color: white;
-  z-index: 999;
-  animation: blink 1.5s infinite;
+  z-index: 10;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 10px rgba(30, 58, 138, 0.6);
 }
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.carousel-caption {
-  top: 50%;
-  transform: translateY(-50%);
-  bottom: auto;
-  margin: 1px;
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
 }
 
 /* === Hero Section Layout === */

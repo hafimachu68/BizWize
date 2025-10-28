@@ -73,39 +73,32 @@ const HeroSection = forwardRef((props, ref) => {
   ];
 
   return (
-    <section className="hero-section">
-      <Carousel fade controls indicators interval={10000} className="carousel-container">
-        {slides.map((slide, idx) => (
-          <Carousel.Item key={idx}>
-            <img className="d-block hero-image" src={slide.image} alt={slide.title} />
-            {/* <Carousel.Caption className="poster-caption">
-              <h3>{slide.title}</h3>
-              <p className="subtext">{slide.subtext}</p>
-              <p className="price">{slide.price}</p>
-              <ul className="features">
-                {slide.features.map((f, i) => (<li key={i}>✅ {f}</li>))}
-              </ul>
-            </Carousel.Caption> */}
-          </Carousel.Item>
-        ))}
-      </Carousel>
+  <section className="custom-hero-section">
+  <Carousel fade controls indicators interval={7000} className="custom-carousel">
+    {slides.map((slide, idx) => (
+      <Carousel.Item key={idx} className="custom-carousel-item">
+        <img className="custom-hero-img" src={slide.image} alt={slide.title} />
+      </Carousel.Item>
+    ))}
+  </Carousel>
 
-      <div className="hero-form" ref={formRef}>
-        <h2>Get a Free Consultation</h2>
-        <form onSubmit={handleSubmit}>
-          <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required />
-          <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
-          <input type="tel" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} required />
-          <textarea name="message" placeholder="Your Message" rows="3" value={formData.message} onChange={handleChange} required></textarea>
-          <button type="submit">Enquiry</button>
-        </form>
-        {toast && <div className="toast">✅ Submitted! We'll reach out shortly.</div>}
-      </div>
+  <div className="custom-hero-form" ref={formRef}>
+    <h2>Get a Free Consultation</h2>
+    <form onSubmit={handleSubmit}>
+      <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required />
+      <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+      <input type="tel" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} required />
+      <textarea name="message" placeholder="Your Message" rows="3" value={formData.message} onChange={handleChange} required></textarea>
+      <button type="submit">Enquiry</button>
+    </form>
+    {toast && <div className="custom-toast">✅ Submitted! We'll reach out shortly.</div>}
+  </div>
 
-      <div className="call-now" onClick={handleCallClick}>
-        📞 <span>We’ll call you just after 30 minutes</span>
-      </div>
-    </section>
+  <div className="custom-call-now" onClick={handleCallClick}>
+    📞 <span>We’ll call you just after 30 minutes</span>
+  </div>
+</section>
+
   );
 });
 

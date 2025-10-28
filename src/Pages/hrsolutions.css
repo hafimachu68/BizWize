@@ -1,0 +1,251 @@
+/* ===== General Page Styling ===== */
+.hr-page {
+  font-family: 'Poppins', sans-serif;
+  color: #1a1a1a;
+  background: linear-gradient(to bottom, #f5f9ff, #e8f3ff);
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+/* ===== Hero Section ===== */
+.hr-hero {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hr-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 30, 80, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+  padding: 20px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.hero-icon {
+  color: #E8F9FD;
+  margin-bottom: 1rem;
+  display: inline-block;
+  animation: pulseGlow 2s infinite alternate;
+}
+
+.hr-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #cce0ff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hr-hero p {
+  font-size: 1.2rem;
+  color: #eaf4ff;
+  line-height: 1.6;
+}
+
+/* ===== About Section ===== */
+.hr-about {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+.hr-about h2 {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #0056b3, #007BFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hr-about p {
+  max-width: 900px;
+  margin: 0 auto;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+/* ===== Services Section ===== */
+.hr-services {
+  background: linear-gradient(to bottom, #e8f9fd, #f5faff);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hr-services h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #003366, #007BFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom 2 + 3 Layout */
+.hr-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Force the 5th card to break into the second row’s third column */
+.hr-card:nth-child(3) {
+  grid-column: 1 / span 1;
+}
+.hr-card:nth-child(4) {
+  grid-column: 2 / span 1;
+}
+.hr-card:nth-child(5) {
+  grid-column: 1 / span 2;
+  justify-self: center;
+  width: 48%;
+}
+
+/* Card Styles */
+.hr-card {
+  background: linear-gradient(135deg, #ffffff, #eaf4ff);
+  border-radius: 18px;
+  padding: 35px 25px;
+  box-shadow: 0 6px 20px rgba(0, 70, 160, 0.1);
+  transition: all 0.4s ease;
+  transform: translateY(0);
+}
+
+.hr-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  background: linear-gradient(135deg, #007BFF, #0056b3);
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 90, 200, 0.25);
+}
+
+.hr-card h3 {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  color: #004b8d;
+  transition: color 0.3s ease;
+}
+
+.hr-card:hover h3 {
+  color: #fff;
+}
+
+.hr-card p {
+  color: #555;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.hr-card:hover p {
+  color: #eaf4ff;
+}
+
+.hr-card svg {
+  color: #007BFF;
+  transition: color 0.3s ease;
+}
+
+.hr-card:hover svg {
+  color: #fff;
+}
+
+/* ===== CTA Section ===== */
+.hr-cta {
+  background: linear-gradient(135deg, #007BFF, #004b8d);
+  text-align: center;
+  padding: 90px 20px;
+  color: #fff;
+}
+
+.hr-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hr-cta p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.2rem;
+  color: #eaf4ff;
+}
+
+.cta-button {
+  background: linear-gradient(90deg, #fff, #dfefff);
+  color: #0056b3;
+  border: none;
+  padding: 14px 45px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+}
+
+.cta-button:hover {
+  background: linear-gradient(90deg, #0056b3, #007BFF);
+  color: #fff;
+  transform: scale(1.07);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    text-shadow: 0 0 10px #a3c8ff;
+  }
+  100% {
+    text-shadow: 0 0 25px #d4e6ff;
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .hr-cards {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .hr-card:nth-child(5) {
+    grid-column: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hr-hero h1 {
+    font-size: 2.2rem;
+  }
+  .hr-hero p {
+    font-size: 1rem;
+  }
+  .hr-about, .hr-services, .hr-cta {
+    padding: 60px 15px;
+  }
+}
