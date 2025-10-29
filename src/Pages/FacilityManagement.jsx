@@ -8,8 +8,8 @@ export default function FacilityManagement() {
 
       {/* Hero Section */}
       <section className="facility-hero">
-        <div className="hero-overlay"></div>
-        <div className="hero-content animate-fade">
+        <div className="fhero-overlay"></div>
+        <div className="fhero-content animate-fade">
           <h1>Facility Management Excellence</h1>
           <p>
             Reliable, professional, and efficient management solutions for commercial and residential properties. Ensuring seamless operations, safety, and tenant satisfaction.
@@ -22,7 +22,7 @@ export default function FacilityManagement() {
 
       {/* About Section */}
       <section className="facility-about animate-slide">
-        <h2>About Our Facility Management</h2>
+        <h2 className='hh2'>About Our Facility Management</h2>
         <p>
           At BizWize Facility Management, we combine expertise, modern technology, and attention to detail to provide premium services. From maintenance and cleaning to security and tenant support, we handle everything efficiently.
         </p>
@@ -30,7 +30,7 @@ export default function FacilityManagement() {
 
       {/* Services Section */}
       <section className="facility-services animate-slide">
-        <h2>Our Services</h2>
+        <h2 className='hh2'>Our Services</h2>
 
         <div className="service-detail">
           <Building2 className="service-icon neon-icon" />
@@ -75,7 +75,7 @@ export default function FacilityManagement() {
 
       {/* Benefits Section */}
       <section className="facility-benefits animate-slide">
-        <h2>Why Choose Us?</h2>
+        <h2 className="hh2">Why Choose Us?</h2>
         <ul>
           <li>✅ Experienced, certified team with proven track record</li>
           <li>✅ Tailored solutions for commercial & residential properties</li>

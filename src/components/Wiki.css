@@ -1,0 +1,78 @@
+.wiki-page {
+  font-family: 'Poppins', sans-serif;
+  color: #0d1f51;
+  background: #f0f7ff;
+  padding-bottom: 60px;
+}
+
+/* Hero */
+.wiki-hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0d1f51, #3ab6ff);
+  color: #fff;
+}
+
+.wiki-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.wiki-hero p {
+  font-size: 1.2rem;
+}
+
+/* Accordion */
+.wiki-accordion {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.wiki-item {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.wiki-title {
+  width: 100%;
+  text-align: left;
+  padding: 18px 20px;
+  font-size: 1.2rem;
+  background: #e8f9fd;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.wiki-title:hover {
+  background: #c5e5f7;
+}
+
+.wiki-title.active {
+  background: #3ab6ff;
+  color: #fff;
+}
+
+.wiki-content {
+  padding: 18px 20px;
+  font-size: 1rem;
+  color: #2a3d66;
+  line-height: 1.6;
+}
+
+.arrow {
+  font-size: 1rem;
+  transition: transform 0.3s;
+}
+
+.wiki-title.active .arrow {
+  transform: rotate(180deg);
+}

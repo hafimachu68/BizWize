@@ -17,14 +17,14 @@ export default function DigitalMarketing() {
             DigiWize — the digital powerhouse under <strong>BizWize UAE</strong> — specializes in creating brand success stories through strategy,
             innovation, and results-driven marketing. We bring visibility, engagement, and conversions to your business.
           </p>
-          <a href="/contact"><button className="cta-btn btnav text-light ">Let’s Grow Your Brand</button></a>
+          <a href="/contact"><button className="cta-btn btnav  ">Let’s Grow Your Brand</button></a>
         </div>
       </section>
 
       {/* DigiWize Info Section */}
       <section className="about-digiwize">
         <div className="digi-content">
-          <h2>About DigiWize</h2>
+          <h2 className='hh2'>About DigiWize</h2>
           <p>
             DigiWize is the dedicated <strong>Digital Marketing Division of BizWize UAE</strong>, crafted to deliver high-performance marketing 
             services tailored for modern brands. We understand the evolving digital landscape and help businesses stand out through 
@@ -45,7 +45,7 @@ export default function DigitalMarketing() {
 
       {/* Core Services */}
       <section className="marketing-services">
-        <h2>Our Core Marketing Services</h2>
+        <h2 className='hh2'>Our Core Marketing Services</h2>
         <div className="service-grid">
           {[
             {
@@ -90,7 +90,7 @@ export default function DigitalMarketing() {
 
       {/* Why Choose DigiWize */}
       <section className="why-choose-dm">
-        <h2>Why Choose DigiWize?</h2>
+        <h2 className='hh2'>Why Choose DigiWize?</h2>
         <p>
           As BizWize’s specialized digital division, DigiWize bridges creativity and analytics to deliver 
           end-to-end marketing excellence. We’re not just marketers — we’re growth partners.

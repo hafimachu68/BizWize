@@ -52,32 +52,61 @@
 }
 
 /* Hero Section */
+/* Hero Section with Background Image */
 .about-hero {
-  background: linear-gradient(135deg, #0d1f51, #3ab6ff);
+  position: relative;
+  height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
-  padding: 120px 20px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom right, rgba(13, 31, 81, 0.85), rgba(58, 182, 255, 0.6));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.about-hero-content {
   text-align: center;
+  max-width: 800px;
+  z-index: 2;
 }
 
 .about-hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 3.2rem;
   font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .about-hero h1 span {
+  color: #3ab6ff;
   position: relative;
 }
 
 .about-hero h1 span::after {
   content: '';
   position: absolute;
-  bottom: -6px;
+  bottom: -8px;
   left: 0;
   width: 0;
   height: 3px;
-  background: #fff;
-  transition: width 0.6s ease;
+  background: #3ab6ff;
+  transition: width 0.5s ease;
 }
 
 .about-hero h1:hover span::after {
@@ -85,11 +114,13 @@
 }
 
 .about-hero p {
-  font-size: 1.3rem;
-  max-width: 700px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #e8f9fd;
   margin: 0 auto;
-  line-height: 1.6;
+  max-width: 700px;
 }
+
 
 /* Section Layout */
 .content-image {

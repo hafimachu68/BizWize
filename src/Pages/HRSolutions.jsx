@@ -20,7 +20,7 @@ export default function HRSolutions() {
 
       {/* About Section */}
       <section className="hr-about">
-        <h2>Why Partner With Us?</h2>
+        <h2 className='hh2'>Why Partner With Us?</h2>
         <p>
           We offer reliable, efficient, and scalable HR solutions that streamline operations and strengthen workplace culture. 
           Our HR specialists focus on what matters — your people, performance, and growth.
@@ -29,7 +29,7 @@ export default function HRSolutions() {
 
       {/* Services Section */}
       <section className="hr-services">
-        <h2>Our Core HR Services</h2>
+        <h2 className='hh2'>Our Core HR Services</h2>
         <div className="hr-cards">
           <div className="hr-card">
             <Briefcase size={40} />

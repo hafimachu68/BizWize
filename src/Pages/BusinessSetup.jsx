@@ -20,7 +20,7 @@ export default function BusinessSetup() {
       </section>
 
 <section className="service-overview">
-  <h2><Briefcase size={32}/> What We Offer</h2>
+  <h2 className='hh2'><Briefcase size={32}/> What We Offer</h2>
 
   {/* Animated Background */}
   <div className="service-bg-anim">
@@ -79,7 +79,7 @@ export default function BusinessSetup() {
 
       {/* Why Choose Us */}
       <section className="why-choose">
-        <h2>Why Choose Us?</h2>
+        <h2 className='hh2'>Why Choose Us?</h2>
         <p>
           With years of experience in the UAE market, we simplify complex business setup processes — 
           saving you time, effort, and money.

@@ -18,15 +18,20 @@ export default function AboutUs() {
         <div className="circle"></div>
       </div>
 
-      {/* Hero Section */}
+      {/* Hero Section with Background Image */}
       <section className="about-hero">
-        <div className="about-hero-content">
-          <h1>About <span>BizWize</span></h1>
-          <p>
-            BizWize empowers entrepreneurs and companies to establish and grow their businesses in the UAE.
-            From Free Zone to Mainland and Offshore, we provide seamless, reliable business setup solutions
-            designed to make your entrepreneurial journey effortless.
-          </p>
+        <div className="about-hero-overlay">
+          <div className="about-hero-content">
+            <h1>
+              About <span>BizWize</span>
+            </h1>
+            <p>
+              BizWize empowers entrepreneurs and companies to establish and grow
+              their businesses in the UAE. From Free Zone to Mainland and Offshore,
+              we provide seamless, reliable business setup solutions designed to make
+              your entrepreneurial journey effortless.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -37,13 +42,13 @@ export default function AboutUs() {
           <div className="text">
             <h2 className="underline-title">Our Story</h2>
             <p>
-              Founded with a passion for entrepreneurship, BizWize began with a simple goal — to simplify the process
-              of company formation and help visionaries turn their ideas into thriving businesses. Over the years, 
-              we’ve built a strong reputation as a trusted partner for startups and established firms alike.
+              Founded with a passion for entrepreneurship, BizWize began with a
+              simple goal — to simplify the process of company formation and help
+              visionaries turn their ideas into thriving businesses.
             </p>
             <p>
-              Our team of experts ensures a smooth experience from licensing to launch — so you can focus on your dream
-              while we handle the rest.
+              Our team of experts ensures a smooth experience from licensing to
+              launch — so you can focus on your dream while we handle the rest.
             </p>
             <p className="highlight">
               "Your business dreams, our expertise – together we make them happen."
@@ -59,9 +64,8 @@ export default function AboutUs() {
           <div className="text">
             <h2 className="underline-title">Our Mission</h2>
             <p>
-              To provide transparent, fast, and professional business setup services that allow entrepreneurs
-              to focus on growth and innovation. We strive to be a catalyst for success by removing barriers
-              and simplifying complex legal frameworks.
+              To provide transparent, fast, and professional business setup
+              services that allow entrepreneurs to focus on growth and innovation.
             </p>
             <ul className="key-points">
               <li>Comprehensive business setup guidance</li>
@@ -81,13 +85,12 @@ export default function AboutUs() {
           <div className="text">
             <h2 className="underline-title">Our Vision</h2>
             <p>
-              To become the UAE’s most trusted business setup consultancy, recognized for professionalism,
-              innovation, and customer success. We envision a world where starting a business is not complicated,
-              but an empowering experience for every dreamer.
+              To become the UAE’s most trusted business setup consultancy,
+              recognized for professionalism, innovation, and customer success.
             </p>
             <p>
-              Our long-term goal is to inspire confidence, nurture entrepreneurship, and build a community
-              of future-ready businesses that shape tomorrow’s economy.
+              We envision a world where starting a business is not complicated,
+              but an empowering experience for every dreamer.
             </p>
             <p className="highlight">
               "Empowering businesses. Building futures."
@@ -117,8 +120,13 @@ export default function AboutUs() {
       {/* Call to Action */}
       <section className="about-cta">
         <h2>Ready to Launch Your Business?</h2>
-        <p>Contact BizWize today and let our experts guide you to success. Your business journey starts here!</p>
-        <Link to="/contact" className="cta-button">Get Consultation</Link>
+        <p>
+          Contact BizWize today and let our experts guide you to success.
+          Your business journey starts here!
+        </p>
+        <Link to="/contact" className="cta-button">
+          Get Consultation
+        </Link>
       </section>
 
       <WhatsAppButton />

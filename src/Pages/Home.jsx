@@ -4,6 +4,7 @@ import Services from '../components/Services';
 import WhyChooseUs from '../components/WhyChooseUs';
 import ContactPrompt from '../components/ContactPrompt';
 import WhatsAppButton from '../components/WhatsAppButton';
+import SuccessBanner from '../components/SuccessBanner';
 
 export default function Home() {
   const heroRef = useRef();
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <div className="home-page">
       <HeroSection ref={heroRef} />
+      <SuccessBanner/>
       <Services />
       <WhyChooseUs />
       <ContactPrompt onInquiryClick={scrollToHeroForm} />

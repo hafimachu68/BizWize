@@ -14,20 +14,20 @@
   justify-content: center;
   text-align: center;
   color: #fff;
-  background-image: url('https://images.unsplash.com/photo-1593541060691-0aa5d5d062c2?auto=format&fit=crop&w=1500&q=80');
+background-image: url('https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1500');
   background-size: cover;
   background-position: center;
   overflow: hidden;
 }
 
-.hero-overlay {
+.fhero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 29, 70, 0.65);
   z-index: 1;
 }
 
-.hero-content {
+.fhero-content {
   position: relative;
   z-index: 2;
   max-width: 750px;
@@ -35,7 +35,7 @@
   animation: fadeIn 1.5s ease-in-out;
 }
 
-.hero-content h1 {
+.fhero-content h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -44,7 +44,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.hero-content p {
+.fhero-content p {
   font-size: 1.2rem;
   line-height: 1.8;
   color: #e6f6ff;
@@ -173,12 +173,38 @@
   max-width: 700px;
   margin: 0 auto;
 }
+.hh2 {
+  position: relative;
+  display: inline-block;
+  font-size: 2.2rem;
+  color: #1a1d70;
+  margin-bottom: 30px;
+}
+
+.hh2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #38bdf8, #1a1d70);
+  box-shadow: 0 0 8px #38bdf8, 0 0 15px #1a1d70;
+  border-radius: 2px;
+  transition: transform 0.5s ease;
+}
+
+.hh2:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
 
 .facility-benefits li {
   font-size: 1rem;
   line-height: 2;
   color: #1a1d70;
-  text-align: left;
+  text-align: center;
   padding-left: 25px;
   position: relative;
 }

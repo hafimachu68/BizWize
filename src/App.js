@@ -14,6 +14,9 @@ import ManagementConsultancy from './Pages/ManagementConsultancy';
 import FacilityManagement from './Pages/FacilityManagement';
 import AccountingBookkeeping from './Pages/AccountingBookkeeping';
 import ThankYou from './Pages/ThankYou';
+import FAQs from './Pages/FAQs';
+import Blog from './components/Blog';
+import Wiki from './components/Wiki';
 // For now comment these if not created yet
 // import FreeZone from './pages/FreeZone';
 // import Mainland from './pages/Mainland';
@@ -38,6 +41,10 @@ function App() {
 
            <Route path="/about" element={<AboutUs/>} />
            <Route path="/contact" element={<Contact/>} />
+                      <Route path="/faq" element={<FAQs/>} />
+                      <Route path="/blog" element={<Blog/>} />
+                      <Route path="/wiki" element={<Wiki/>} />
+
                    <Route path="/thankyou" element={<ThankYou/>} />
 
 

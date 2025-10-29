@@ -9,7 +9,7 @@ export default function ManagementConsultancy() {
       <section className="management-hero">
         <div className="hero-overlay"></div>
         <div className="hero-content">
-          <h1>Management Consultancy</h1>
+          <h1 >Management Consultancy</h1>
           <p>
             Empowering businesses to achieve excellence through strategic insights, operational optimization, 
             and sustainable growth solutions.
@@ -23,7 +23,7 @@ export default function ManagementConsultancy() {
 
       {/* Services Section */}
       <section className="management-services">
-        <h2>Our Consultancy Expertise</h2>
+        <h2 className='hh2'>Our Consultancy Expertise</h2>
         <p className="section-subtext">
           We provide tailored strategies designed to enhance your business performance and efficiency.
         </p>
