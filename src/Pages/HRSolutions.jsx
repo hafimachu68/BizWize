@@ -79,7 +79,7 @@ export default function HRSolutions() {
         <p>
           Partner with us for full-spectrum HR solutions that enhance employee satisfaction, compliance, and growth.
         </p>
-        <button className="cta-button">Get Started</button>
+        <button className="hrcta-button">Get Started</button>
       </section>
     </div>
   );

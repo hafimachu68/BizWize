@@ -185,7 +185,7 @@
   color: #eaf4ff;
 }
 
-.cta-button {
+.hrcta-button {
   background: linear-gradient(90deg, #fff, #dfefff);
   color: #0056b3;
   border: none;
@@ -198,7 +198,7 @@
   box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
 }
 
-.cta-button:hover {
+.hrcta-button:hover {
   background: linear-gradient(90deg, #0056b3, #007BFF);
   color: #fff;
   transform: scale(1.07);

@@ -234,6 +234,7 @@
   margin-bottom: 0;
 }
 
+
 .dropara {
   margin-top: 0;
   font-family: "Fira Sans", sans-serif;
@@ -321,7 +322,7 @@ color: gray;
   }
   .demo {
     border-bottom: none;
-    margin-left: 8rem;
+    margin-left: 1rem;
 }
  /* .logo-img{
   margin-left: -1.9rem;

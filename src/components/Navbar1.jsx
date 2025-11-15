@@ -13,9 +13,27 @@ function Navbar() {
         <a className="navbar-brand log" href="/">
           <img className="logo-img mr-3" src={group8} alt="" width="268" height="52" />
         </a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
+       <button
+  className="navbar-toggler"
+  type="button"
+  data-bs-toggle="collapse"
+  data-bs-target="#navbarSupportedContent"
+  aria-controls="navbarSupportedContent"
+  aria-expanded="false"
+  aria-label="Toggle navigation"
+  style={{
+    borderColor: 'white',
+  }}
+>
+  <span
+    className="navbar-toggler-icon"
+    style={{
+      backgroundImage:
+        "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E\")",
+    }}
+  ></span>
+</button>
+
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav text-left mb-2 mb-lg-0">
             <li className="nav-item dropdown mx-4">
@@ -128,49 +146,6 @@ function Navbar() {
                 </div>
               </ul>
             </li>
-
-            {/* <li className="nav-item dropdown mx-4">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Usecases
-              </a>
-              <ul className="dropdown-menu usecase-menu" aria-labelledby="navbarDropdown2">
-                <li className="usec-item pt-3">
-                  <a className='link' href="/Usecase1">
-                    <div className="platform-text us-item">
-                      <h6 className="udrop">Use case 01</h6>
-                      <p className='udropara'>A cutting-edge attendance management solution designed with the efficiency and simplicity in mind.</p>
-                    </div>
-                  </a>
-                </li>
-                <li className="usec-item pt-3">
-                  <a className='link' href="/Usecase2">
-                    <div className="platform-text us-item">
-                      <h6 className="udrop">Use case 02</h6>
-                      <p className='udropara'>A van sales management mobile app that can be easily customized, using low-code technology.</p>
-                    </div>
-                  </a>
-                </li>
-                <li className="usec-item pt-3">
-                  <a className='link' href="/Usecase3">
-                    <div className="platform-text us-item">
-                      <h6 className="udrop">Use case 03</h6>
-                      <p className='udropara'>A dynamic customer relationship management (CRM) application, meticulously crafted using low-code technology.</p>
-                    </div>
-                  </a>
-                </li>
-                <li className="usec-item pt-3" style={{ opacity: 0.5, pointerEvents: 'none', cursor: 'not-allowed' }}>
-                  <a className="link" href="#">
-                    <div className="platform-text us-item">
-                      <h6 className="udrop">Use case 04</h6>
-                      <p className="udropara">
-                        A bespoke application developed using low-code technology that redefines the process of creating, managing, and tracking quotations.
-                      </p>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </li> */}
-
             <li className="nav-item mx-4">
               <a className="nav-link active" aria-current="page" href="/about">About Us</a>
             </li>

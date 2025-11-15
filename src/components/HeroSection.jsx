@@ -4,8 +4,8 @@ import { Carousel } from 'react-bootstrap';
 import freezoneImg from '../images/freez1.jpeg';
 import mainlandImg from '../images/freez2.jpeg';
 import offshoreImg from '../images/freez3.jpeg';
-import biz1 from '../images/freez4.jpeg';
-import biz2 from '../images/freez5.jpeg';
+import biz1 from '../images/biz11.jpeg';
+import biz2 from '../images/biz22.jpeg';
 
 
 import './HeroSection.css';
