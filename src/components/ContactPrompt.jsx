@@ -28,7 +28,7 @@ export default function ContactPrompt({ onInquiryClick }) {
 
         <div className="contact-actions">
           <a
-            href="https://wa.me/971564149648"  // Use your WhatsApp number here
+            href="https://wa.me/971585893680"  // Use your WhatsApp number here
             target="_blank"
             rel="noopener noreferrer"
             className="contact-button"

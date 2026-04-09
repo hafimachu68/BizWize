@@ -5,7 +5,7 @@ import whatsappIcon from '../images/whatsapp.png'; // ✅ correct path
 export default function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/971564149648"
+      href="https://wa.me/971585893680"
       className="whatsapp-float"
       target="_blank"
       rel="noopener noreferrer"

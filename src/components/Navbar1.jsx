@@ -190,7 +190,7 @@ function Navbar() {
           <li className="nav-item demo">
   <a href="/digital-marketing" className="digiwize-link">
     <button className="btn btnavdigi text-light" type="submit">
-      <span className="digi">Digi</span><span className="wize">Wize.</span>
+      <span className="digi">Digi</span><span className="wize">Wize</span>
       <div className="subtext">THE DIGITAL MARKETING COMPANY</div>
     </button>
   </a>
