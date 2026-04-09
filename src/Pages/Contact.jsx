@@ -44,7 +44,7 @@ export default function Contact() {
         <div className="info-card">
           <div className="icon-wrapper"><Mail className="icon" /></div>
           <h3>Email</h3>
-          <p>info@bizwize.ae<br />support@bizwize.ae</p>
+          <p>info@bizwizeuae.com</p>
         </div>
 
         <div className="info-card">
