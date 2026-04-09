@@ -1,77 +1,151 @@
 import React from 'react';
 import './management-consultancy.css';
-import { ClipboardList, BarChart3, Briefcase, Target, ShieldCheck, Workflow } from 'lucide-react';
+import { ClipboardList, BarChart3, Briefcase, Target, ShieldCheck, Workflow, SearchCheck, ArrowRight, CheckCircle2 } from 'lucide-react';
+import SEO from '../components/SEO';
+import ServiceEnhancements from '../components/ServiceEnhancements';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 export default function ManagementConsultancy() {
+  
+  const mngSteps = [
+    { title: "Deep-Dive Diagnostics", desc: "We conduct a granular audit of your corporate structure, financial models, and operational bottlenecks." },
+    { title: "Strategic Roadmap", desc: "Developing a clear, actionable path for M&A, restructuring, and hyper-growth scaling." },
+    { title: "Execution & Change Management", desc: "We don't just advise; we embed with your C-suite to execute changes and deploy new strategic frameworks safely." },
+    { title: "Performance Governance", desc: "Establishing strict KPIs, Board structures, and governance policies to ensure sustainable, long-term ROI." }
+  ];
+
+  const mngCaseStudy = {
+    title: "Supply Chain Restructuring for an Abu Dhabi Logistics Firm",
+    clientLabel: "Abu Dhabi Enterprise Freight Company",
+    challenge: "Bloated operational overheads and compliance failures causing a 15% drop in YoY profit margins.",
+    solution: "Conducted a top-down operational audit, restructured departmental workflows, and introduced automated compliance and reporting matrices.",
+    result: "Reduced operational overhead by 22%, improved delivery SLA timelines by 30%, and restored profit margins within 6 months."
+  };
+
+  const mngFaqs = [
+    { question: "Do you offer on-site management consultancy across the UAE?", answer: "Yes, our elite consultants deploy directly to client sites across Dubai, Abu Dhabi, Sharjah, and the wider GCC to ensure hands-on execution." },
+    { question: "For which industries do you provide strategic advisory?", answer: "We possess deep sector-specific expertise in Logistics, Healthcare, Real Estate, Technology (SaaS/Fintech), and Retail/FMCG." }
+  ];
+
   return (
-    <div className="management-page">
-      {/* Hero Section */}
-      <section className="management-hero">
-        <div className="hero-overlay"></div>
+    <div className="management-page premium-mc">
+      <SEO 
+        title="Elite Management Consultancy Dubai & Abu Dhabi | BizWize"
+        description="BizWize provides top-tier management consultancy in Dubai & Abu Dhabi. We empower enterprise growth with strategic planning, restructuring, and M&A advisory."
+        url="https://www.bizwizeuae.com/management-consultancy"
+      />
+      
+      {/* Premium Hero Section */}
+      <section className="mc-hero-premium">
+        <div className="hero-gradient-overlay"></div>
         <div className="hero-content">
-          <h1 >Management Consultancy</h1>
+          <div className="badge mc-badge">Strategic Advisory Partners</div>
+          <h1>Architecting <br/>Corporate <span className="text-mc-glow">Excellence</span></h1>
           <p>
-            Empowering businesses to achieve excellence through strategic insights, operational optimization, 
-            and sustainable growth solutions.
+            We partner with visionary leaders in the UAE to solve their most complex 
+            operational challenges, restructure for scale, and drive unprecedented enterprise value. 
           </p>
-          <div className="cta-buttons">
-            <a href="/contact"><button className="cta-btn">Let’s Grow Your Brand</button></a>
-            <a href="/contact"><button className="cta-btn">Book Your Free Consultation</button></a>
+          <div className="hero-actions">
+            <a href="/contact"><button className="premium-btn primary-mc">Engage Our Consultants <ArrowRight size={18}/></button></a>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="management-services">
-        <h2 className='hh2'>Our Consultancy Expertise</h2>
-        <p className="section-subtext">
-          We provide tailored strategies designed to enhance your business performance and efficiency.
-        </p>
-
-        <div className="service-grid">
-          <div className="service-card">
-            <BarChart3 className="icon" />
-            <h3>Operational Analysis & Optimization</h3>
-            <p>We assess your workflows and implement proven methods to streamline operations for maximum efficiency.</p>
+      {/* Advisory Principles Bar */}
+      <section className="mc-principles-strip">
+        <div className="principles-container">
+          <div className="principle">
+            <SearchCheck size={28} className="mc-icon-sm"/>
+            <h4>Data-Driven Clarity</h4>
           </div>
-
-          <div className="service-card">
-            <Briefcase className="icon" />
-            <h3>Business Strategy & Planning</h3>
-            <p>We design customized strategies that align with your goals to ensure measurable, sustainable growth.</p>
+          <div className="principle">
+            <Workflow size={28} className="mc-icon-sm"/>
+            <h4>Flawless Execution</h4>
           </div>
-
-          <div className="service-card">
-            <Workflow className="icon" />
-            <h3>Process Improvement</h3>
-            <p>We refine existing systems to improve productivity, reduce costs, and drive business agility.</p>
-          </div>
-
-          <div className="service-card">
-            <ShieldCheck className="icon" />
-            <h3>Risk Management & Compliance</h3>
-            <p>Our experts help you identify potential risks and maintain compliance with local and global standards.</p>
-          </div>
-
-          <div className="service-card">
-            <Target className="icon" />
-            <h3>Corporate Governance</h3>
-            <p>We strengthen your governance structure to ensure transparency, accountability, and ethical success.</p>
+          <div className="principle">
+            <ShieldCheck size={28} className="mc-icon-sm"/>
+            <h4>Absolute Discretion</h4>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="management-cta">
-        <div className="cta-content">
-          <h2>Ready to Transform Your Business?</h2>
-          <p>Connect with our experts today and take the first step towards strategic growth and operational excellence.</p>
-          <div className="cta-buttons">
-            <a href="/contact"><button className="cta-btn">Get Started Now</button></a>
-            <a href="/contact"><button className="cta-btn">Book a Free Consultation</button></a>
+      {/* Intro Section - The BizWize Edge */}
+      <section className="mc-intro-premium">
+        <div className="mc-intro-content">
+          <h2>The <span className="text-mc-glow">Catalyst</span> for Next-Level Growth.</h2>
+          <p>
+            In a fiercely competitive MENA market, incremental improvements are no longer enough. 
+            BizWize Management Consultancy deploys battle-tested strategies to optimize your P&L, 
+            streamline your human capital, and position your brand for market dominance.
+          </p>
+        </div>
+      </section>
+
+      {/* Core Services Grid */}
+      <section className="mc-services-premium">
+        <div className="section-header">
+          <h2>Our Advisory Capabilities</h2>
+          <p>World-class frameworks tailored for the Middle East's economic landscape.</p>
+        </div>
+
+        <div className="premium-grid mc-grid">
+          <div className="glass-feature-card mc-card">
+            <div className="icon-wrapper-mc"><BarChart3 size={38} strokeWidth={1.5} /></div>
+            <h3>Operational Restructuring</h3>
+            <p>We eliminate organizational silos, optimize supply chains, and slash overheads to transform your business into a lean, agile powerhouse.</p>
+          </div>
+
+          <div className="glass-feature-card mc-card">
+            <div className="icon-wrapper-mc"><Briefcase size={38} strokeWidth={1.5} /></div>
+            <h3>Strategy & M&A Advisory</h3>
+            <p>From market entry feasibility studies to post-merger integration. We provide the intelligence required to make aggressive corporate moves safely.</p>
+          </div>
+
+          <div className="glass-feature-card mc-card">
+            <div className="icon-wrapper-mc"><Workflow size={38} strokeWidth={1.5} /></div>
+            <h3>Process Engineering</h3>
+            <p>We map, diagnose, and redesign your core business processes to increase output velocity and drastically reduce error rates.</p>
+          </div>
+
+          <div className="glass-feature-card mc-card">
+            <div className="icon-wrapper-mc"><ShieldCheck size={38} strokeWidth={1.5} /></div>
+            <h3>Risk & Crisis Management</h3>
+            <p>Anticipate disruptions before they happen. We build robust corporate shields against financial, operational, and regulatory risks.</p>
+          </div>
+
+          {/* Featured Wide Card */}
+          <div className="glass-feature-card span-2 mc-featured-card">
+            <div className="featured-content">
+              <div className="icon-wrapper-mc-alt"><Target size={38} strokeWidth={1.5} /></div>
+              <h3>Corporate Governance & Board Structuring</h3>
+              <p>
+                A strong business requires an infallible foundation. We design and implement world-class corporate governance frameworks, ensuring total transparency, accountability, and ethical success for family offices and enterprise conglomerates in the UAE.
+              </p>
+              <ul className="mc-benefits">
+                <li><CheckCircle2 size={18} className="mc-icon-sm-alt"/> Board Committee Formations</li>
+                <li><CheckCircle2 size={18} className="mc-icon-sm-alt"/> Shareholder Dispute Resolution</li>
+                <li><CheckCircle2 size={18} className="mc-icon-sm-alt"/> Succession Planning</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
+
+      <ServiceEnhancements steps={mngSteps} caseStudy={mngCaseStudy} faqs={mngFaqs} />
+
+      {/* Elite CTA Section */}
+      <section className="premium-cta mc-cta-section">
+        <div className="cta-glass-panel mc-glow">
+          <h2>Command Your Industry.</h2>
+          <p>
+            True market leadership requires decisive action. Schedule a confidential 
+            strategy brief with our Senior Partners today.
+          </p>
+          <a href="/contact"><button className="premium-btn cta-strong mc-cta-btn">Book Executive Consultation <ArrowRight size={20}/></button></a>
+        </div>
+      </section>
+
+      <WhatsAppButton />
     </div>
   );
 }

@@ -1,44 +1,37 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import './SuccessBanner.css';
 
 export default function SuccessBanner() {
   return (
-    <section className="success-banner-section">
-
-      {/* Wave connection from Hero section */}
-      <div className="top-wave">
-        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-          <path
-            d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,0 L0,0 Z"
-            fill="#ffffff"
-          ></path>
-        </svg>
-      </div>
-
+    <section className="premium-success-banner">
+      <div className="banner-glow-line"></div>
+      
       <div className="success-banner-content">
-
-        <span className="intro-text">
-          UAE Business Setup Experts
-        </span>
-
-        <h1>
-          Your Success is Our <span>Business</span>
-        </h1>
-
-        <p className="intro-para">
-          Start your journey with trusted <strong>business setup consultants in the UAE</strong>. 
-          We specialize in seamless <strong>company formation in Dubai</strong>, including 
-          <strong>mainland business setup, free zone company registration, and offshore company formation</strong>. 
-          From trade licenses and visa processing to PRO services and corporate structuring, 
-          our experts provide end-to-end solutions that help entrepreneurs, startups, and 
-          international investors establish and grow successful businesses in the UAE.
-        </p>
-
-        <Link to="/contact" className="cta-button">
-          Get Free Consultation
-        </Link>
-
+        <div className="banner-text-side">
+          <span className="badge banner-badge">Trusted Authority</span>
+          <h2>Your Success is Our <span className="text-glow">Business</span></h2>
+          <p className="banner-para">
+            Start your journey with the most trusted business setup consultants in the UAE. 
+            From highly complex free zone integrations to accelerated mainland licensing, we provide 
+            end-to-end corporate structuring that scales effortlessly.
+          </p>
+          <ul className="banner-list">
+            <li><CheckCircle2 size={18} className="check-icon" /> Mainland, Freezone & Offshore Setup</li>
+            <li><CheckCircle2 size={18} className="check-icon" /> End-to-end PRO Services</li>
+            <li><CheckCircle2 size={18} className="check-icon" /> Golden Visa Processing</li>
+          </ul>
+        </div>
+        
+        <div className="banner-cta-side">
+          <div className="cta-glass-box">
+             <h3>Ready to launch?</h3>
+             <p>Our advisors are standing by.</p>
+             <a href="/contact" className="premium-btn cta-banner-btn">
+               Schedule A Call <ArrowRight size={18} />
+             </a>
+          </div>
+        </div>
       </div>
     </section>
   );

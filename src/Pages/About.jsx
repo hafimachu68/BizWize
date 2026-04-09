@@ -1,132 +1,174 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Target, Eye, ShieldCheck, Zap, Users, Trophy, Globe, ArrowRight, CheckCircle2 } from 'lucide-react';
 import WhatsAppButton from '../components/WhatsAppButton';
+import SEO from '../components/SEO';
 import './about.css';
 
 import storyImg from '../images/ab3.png';
 import missionImg from '../images/ab4.png';
 import visionImg from '../images/ab1.png';
-import whyImg from '../images/ab2.png';
 
 export default function AboutUs() {
   return (
-    <div className="about-page">
-      {/* Animated Background */}
-      <div className="animated-bg">
-        <div className="circle"></div>
-        <div className="circle"></div>
-        <div className="circle"></div>
-      </div>
+    <div className="about-page premium-about">
+      <SEO 
+        title="About BizWize | Leading UAE Corporate Advisors"
+        description="Learn more about BizWize UAE. We empower visionaries and global enterprises to dominate the MENA market seamlessly through expert business setup and advisory."
+        url="https://www.bizwizeuae.com/about"
+      />
+      
+      {/* Premium Hero Section */}
+      <section className="about-hero-premium">
+        <div className="hero-gradient-overlay"></div>
+        <div className="hero-content">
+          <div className="badge about-badge">Discover BizWize</div>
+          <h1>
+            Architects of <span className="text-about-glow">Opportunity.</span>
+          </h1>
+          <p>
+            BizWize is the UAE’s premier corporate advisory and business setup firm. 
+            We transition visionaries, startups, and massive global enterprises into the MENA 
+            market seamlessly through precision execution, deep compliance, and strategic foresight.
+          </p>
+        </div>
+      </section>
 
-      {/* Hero Section with Background Image */}
-      <section className="about-hero">
-        <div className="about-hero-overlay">
-          <div className="about-hero-content">
-            <h1>
-              About <span>BizWize</span>
-            </h1>
-            <p>
-              BizWize empowers entrepreneurs and companies to establish and grow
-              their businesses in the UAE. From Free Zone to Mainland and Offshore,
-              we provide seamless, reliable business setup solutions designed to make
-              your entrepreneurial journey effortless.
-            </p>
+      {/* Global Impact Stats */}
+      <section className="about-stats-strip">
+        <div className="stats-container">
+          <div className="stat-card">
+            <h3>5,000+</h3>
+            <p>Companies Formed</p>
+          </div>
+          <div className="stat-card">
+            <h3>40+</h3>
+            <p>Global Jurisdictions</p>
+          </div>
+          <div className="stat-card">
+            <h3>98%</h3>
+            <p>Client Retention</p>
+          </div>
+          <div className="stat-card">
+            <h3>15+</h3>
+            <p>Years Collective Experience</p>
           </div>
         </div>
       </section>
 
-      {/* Our Story */}
-      <section className="about-story">
-        <div className="content-image">
-          <img src={storyImg} alt="BizWize Story" />
-          <div className="text">
-            <h2 className="underline-title">Our Story</h2>
+      {/* Our Story (Premium Split Layout) */}
+      <section className="about-story-premium">
+        <div className="story-container">
+          <div className="story-text">
+            <h2>The BizWize <span className="text-about-glow">Legacy</span></h2>
             <p>
-              Founded with a passion for entrepreneurship, BizWize began with a
-              simple goal — to simplify the process of company formation and help
-              visionaries turn their ideas into thriving businesses.
+              Founded on the belief that navigating the complexities of the UAE market shouldn't be a barrier to entry, BizWize was established to act as a <strong>single-source enterprise partner</strong>.
             </p>
             <p>
-              Our team of experts ensures a smooth experience from licensing to
-              launch — so you can focus on your dream while we handle the rest.
+              We realized that business owners were bouncing between a dozen different agencies for licensing, visas, accounting, and PR. We fundamentally disrupted that model by bringing <em>everything</em> under one highly secure, deeply knowledgeable roof.
             </p>
-            <p className="highlight">
-              "Your business dreams, our expertise – together we make them happen."
-            </p>
+            <div className="story-quote">
+              <div className="quote-line"></div>
+              <p>"We don't just register companies. We engineer corporate structures designed to scale flawlessly in the Middle East."</p>
+            </div>
+          </div>
+          <div className="story-image-wrapper">
+             <img src={storyImg} alt="BizWize Corporate Team" className="premium-img-glow" />
           </div>
         </div>
       </section>
 
-      {/* Mission */}
-      <section className="about-mission">
-        <div className="content-image reverse">
-          <img src={missionImg} alt="BizWize Mission" />
-          <div className="text">
-            <h2 className="underline-title">Our Mission</h2>
+      {/* Vision & Mission (Glass Cards) */}
+      <section className="about-vision-mission">
+        <div className="vm-container">
+          
+          <div className="glass-feature-card about-card">
+            <div className="icon-wrapper-about"><Eye size={38} strokeWidth={1.5}/></div>
+            <h3>Our Vision</h3>
+            <img src={visionImg} alt="Vision" className="vm-img"/>
             <p>
-              To provide transparent, fast, and professional business setup
-              services that allow entrepreneurs to focus on growth and innovation.
+              To be unequivocally acknowledged as the most trusted, innovative, and results-driven corporate advisory firm in the GCC, building a frictionless ecosystem where global capital meets regional opportunity.
             </p>
-            <ul className="key-points">
-              <li>Comprehensive business setup guidance</li>
-              <li>Customized solutions for Free Zone, Mainland & Offshore</li>
-              <li>Transparent pricing with no hidden fees</li>
-              <li>Reliable support at every step</li>
-              <li>Empowering you to build confidently in the UAE</li>
-            </ul>
+          </div>
+
+          <div className="glass-feature-card about-card">
+            <div className="icon-wrapper-about"><Target size={38} strokeWidth={1.5}/></div>
+            <h3>Our Mission</h3>
+            <img src={missionImg} alt="Mission" className="vm-img"/>
+            <p>
+              To relentlessly provide transparent, high-velocity, and hyper-compliant corporate solutions, ensuring every entrepreneur and conglomerate we partner with is mathematically positioned for exponential growth.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Core Values Section */}
+      <section className="about-values">
+        <div className="section-header">
+          <h2>Our Core Constructs</h2>
+          <p>The unbreakable principles that dictate how we operate our firm.</p>
+        </div>
+        <div className="values-grid">
+          <div className="value-item">
+            <ShieldCheck size={32} className="value-icon"/>
+            <h4>Absolute Integrity</h4>
+            <p>We operate with total financial and structural transparency. No hidden fees, no obscured risks.</p>
+          </div>
+          <div className="value-item">
+            <Zap size={32} className="value-icon"/>
+            <h4>High-Velocity Execution</h4>
+            <p>In business, speed is a moat. We execute licensing, banking, and visas significantly faster than the industry standard.</p>
+          </div>
+          <div className="value-item">
+            <Users size={32} className="value-icon"/>
+            <h4>Client-Obsessed</h4>
+            <p>Every account is managed by a dedicated Senior Advisor. You are never passed off to an automated queue.</p>
+          </div>
+          <div className="value-item">
+            <Globe size={32} className="value-icon"/>
+            <h4>Global Standard</h4>
+            <p>We engineer solutions that meet rigorous international IFRS, FATF, and OECD compliance standards.</p>
           </div>
         </div>
       </section>
 
-      {/* Vision */}
-      <section className="about-vision">
-        <div className="content-image">
-          <img src={visionImg} alt="BizWize Vision" />
-          <div className="text">
-            <h2 className="underline-title">Our Vision</h2>
-            <p>
-              To become the UAE’s most trusted business setup consultancy,
-              recognized for professionalism, innovation, and customer success.
-            </p>
-            <p>
-              We envision a world where starting a business is not complicated,
-              but an empowering experience for every dreamer.
-            </p>
-            <p className="highlight">
-              "Empowering businesses. Building futures."
-            </p>
-          </div>
-        </div>
+      {/* Why Choose Us */}
+      <section className="about-why">
+         <div className="why-content">
+           <div className="why-header">
+             <h2>The <span className="text-about-glow">BizWize</span> Advantage</h2>
+             <p>Why Fortune 500s and ambitious start-ups choose to deploy through us.</p>
+           </div>
+           <div className="why-list-container">
+             <ul className="premium-why-list">
+               <li><CheckCircle2 className="why-icon" /> <strong>End-to-End Capabilities:</strong> Setup, Accounting, HR, Marketing & FM all under one roof.</li>
+               <li><CheckCircle2 className="why-icon" /> <strong>Deep Government Relations:</strong> Expedited approvals via VIP Ministry connections.</li>
+               <li><CheckCircle2 className="why-icon" /> <strong>Bespoke Corporate Structuring:</strong> We design holding companies and IP protections, not just base licenses.</li>
+               <li><CheckCircle2 className="why-icon" /> <strong>Post-Setup Ecosystem:</strong> Lifetime corporate sponsorship and renewals management.</li>
+             </ul>
+             <div className="why-trophy">
+               <Trophy size={100} className="trophy-icon" />
+               <p>Award-Winning UAE Corporate Advisors</p>
+             </div>
+           </div>
+         </div>
       </section>
 
-      {/* Why Choose BizWize */}
-      <section className="about-why-choose">
-        <h2 className="underline-title center">Why Choose BizWize</h2>
-        <div className="content-image">
-          <img src={whyImg} alt="Why Choose BizWize" />
-          <div className="text">
-            <ul className="why-points">
-              <li>Expert knowledge of Free Zone, Mainland, and Offshore company formation</li>
-              <li>Transparent pricing and fully tailored solutions</li>
-              <li>Fast, efficient, and compliant documentation process</li>
-              <li>Dedicated consultants for end-to-end support</li>
-              <li>Innovative tools to accelerate your business setup</li>
-              <li>Client-first approach with a proven track record of excellence</li>
-            </ul>
-          </div>
+      {/* Corporate CTA Section */}
+      <section className="premium-cta about-cta-section">
+        <div className="cta-glass-panel about-glow">
+          <h2>Ready to Architect Your Legacy?</h2>
+          <p>
+            Stop wasting time with fragmented agencies. Partner with BizWize and 
+            launch your enterprise with absolute certainty.
+          </p>
+          <Link to="/contact">
+            <button className="premium-btn cta-strong about-cta-btn">
+              Schedule Your Strategy Session <ArrowRight size={20}/>
+            </button>
+          </Link>
         </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="about-cta">
-        <h2>Ready to Launch Your Business?</h2>
-        <p>
-          Contact BizWize today and let our experts guide you to success.
-          Your business journey starts here!
-        </p>
-        <Link to="/contact" className="cta-button">
-          Get Consultation
-        </Link>
       </section>
 
       <WhatsAppButton />

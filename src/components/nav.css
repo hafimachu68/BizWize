@@ -494,3 +494,211 @@ color: gray;
     width: 100%;
   }
 } */
+
+/* ========================================================
+   PREMIUM FINTECH RESTYLING - GLASSMORPHISM OVERRIDES
+   ======================================================== */
+
+.navbar {
+  background: rgba(6, 16, 45, 0.8) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 1050;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+  padding: 0.8rem 2rem !important; /* REDUCED PADDING */
+}
+
+.nav-link {
+  font-family: "Inter", "Blinker", sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 14px !important; /* REDUCED FONT SIZE */
+  color: rgba(255, 255, 255, 0.8) !important;
+  letter-spacing: 0.3px;
+  transition: color 0.3s ease, transform 0.3s ease !important;
+  position: relative;
+  padding: 0.4rem 0.8rem !important; /* REDUCED PADDING */
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: linear-gradient(90deg, #38bdf8, #2563eb);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+  width: 80%;
+}
+
+/* Glassmorphism Dropdowns */
+.navbar .dropdown-menu {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 12px !important; /* REDUCED BORDER RADIUS */
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.5) inset !important;
+  padding: 1rem !important; /* REDUCED PADDING */
+  margin-top: 0.5rem !important; /* REDUCED MARGIN */
+  transition: all 0.3s ease;
+  display: none; /* Bootstrap handles default toggle, but we will force hover on desktop */
+}
+
+@media (min-width: 992px) {
+  .navbar .dropdown:hover > .dropdown-menu {
+    display: block;
+    animation: fadeInDrop 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+}
+
+@keyframes fadeInDrop {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar .platform-menu {
+  width: 650px !important; /* REDUCED WIDTH */
+}
+
+.navbar .uecase-menu {
+  width: 300px !important; /* REDUCED WIDTH */
+}
+
+.platform-item, .rsec-item {
+  display: flex !important;
+  padding: 0.8rem 1rem !important; /* REDUCED PADDING */
+  border-radius: 8px !important; /* REDUCED BORDER RADIUS */
+  transition: all 0.2s ease !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  margin-bottom: 0.3rem !important; /* REDUCED MARGIN */
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+.platform-item:hover, .rsec-item:hover {
+  background: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.08) !important;
+}
+
+.hedrop {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 0.95rem !important; /* REDUCED FONT SIZE */
+  margin-bottom: 0.2rem !important; /* REDUCED MARGIN */
+  display: flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+}
+
+.hedrop i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px !important; /* REDUCED ICON BOX SIZE */
+  height: 32px !important; /* REDUCED ICON BOX SIZE */
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(56, 189, 248, 0.1));
+  border-radius: 8px !important; /* REDUCED BORDER RADIUS */
+  margin-right: 12px !important; /* REDUCED MARGIN */
+  color: #2563eb !important;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hedrop i svg, .hedrop i img {
+  width: 18px !important; /* REDUCED ICON SVG SIZE */
+  height: 18px !important; /* REDUCED ICON SVG SIZE */
+  object-fit: contain; /* Prevent img distortion */
+}
+
+.platform-item:hover .hedrop i, .rsec-item:hover .hedrop i {
+  transform: scale(1.05) rotate(5deg);
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  color: white !important;
+}
+
+.platform-item:hover .hedrop i svg {
+  stroke: white !important;
+}
+
+/* Fix for the custom img icons in Resources dropdown */
+.rsec-item:hover .hedrop i img.pv {
+  filter: brightness(0) invert(1) !important;
+}
+
+.dropara {
+  font-family: "Inter", sans-serif !important;
+  font-size: 0.85rem !important; /* REDUCED FONT SIZE */
+  color: #64748b !important;
+  line-height: 1.4 !important; /* REDUCED LINE HEIGHT */
+  margin-bottom: 0 !important;
+  text-decoration: none !important;
+  padding-left: 44px !important; /* align with text after icon: 32 + 12 */
+}
+
+/* Button Refinement DigiWize */
+.btnavdigi {
+  background: linear-gradient(135deg, #1e3a8a, #0284c7) !important;
+  padding: 6px 18px !important; /* REDUCED PADDING */
+  border-radius: 8px !important; /* REDUCED BORDER RADIUS */
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3), inset 0 1px 0 rgba(255,255,255,0.2) !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.btnavdigi .digi {
+  color: #fff !important;
+  font-weight: 800 !important;
+  font-size: 0.95rem !important; /* REDUCED FONT SIZE */
+  letter-spacing: 0.5px;
+}
+
+.btnavdigi .wize {
+  color: #38bdf8 !important;
+  font-weight: 800 !important;
+  font-size: 0.95rem !important; /* REDUCED FONT SIZE */
+  letter-spacing: 0.5px;
+}
+
+.btnavdigi .subtext {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 0.55rem !important; /* REDUCED FONT SIZE */
+  letter-spacing: 1px !important;
+  font-weight: 600 !important;
+  margin-top: 1px !important; /* REDUCED MARGIN */
+}
+
+.btnavdigi:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 8px 15px rgba(2, 132, 199, 0.4), inset 0 1px 0 rgba(255,255,255,0.3) !important;
+  background: linear-gradient(135deg, #1e40af, #0369a1) !important;
+}
+
+.link {
+  text-decoration: none !important;
+}

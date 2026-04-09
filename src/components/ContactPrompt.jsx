@@ -1,45 +1,31 @@
 import React from 'react';
+import { ArrowUpCircle, CheckCircle2 } from 'lucide-react';
 import './ContactPrompt.css';
 
 export default function ContactPrompt({ onInquiryClick }) {
   return (
-    <section className="contact-prompt-container">
-      {/* Decorative floating background */}
-      <div className="background-shapes">
-        <span className="circle c1"></span>
-        <span className="circle c2"></span>
-        <span className="circle c3"></span>
-        <span className="circle c4"></span>
-        <span className="circle pulse"></span>
-      </div>
-
-      <div className="contact-content">
-        <h2 className="contact-heading">Let's Build Your Business Dream</h2>
+    <div className="contact-prompt-premium">
+      <div className="glow-accent top-right"></div>
+      <div className="glow-accent bottom-left"></div>
+      
+      <div className="contact-content-glass">
+        <h2 className="contact-heading">Ready to dominate your market?</h2>
         <p className="contact-subheading">
-          From setting up your business in the UAE to managing compliance and growth — we're your partner at every step.
+          Stop navigating UAE business setup alone. Let our experts handle the legalities while you focus on growth.
         </p>
-
+        
         <ul className="contact-benefits">
-          <li><span>✅</span> Expert UAE business advisors</li>
-          <li><span>✅</span> Fast company registration</li>
-          <li><span>✅</span> Hassle-free documentation</li>
-          <li><span>✅</span> 24/7 client support</li>
+          <li><CheckCircle2 color="#38bdf8" /> Free Initial Consultation</li>
+          <li><CheckCircle2 color="#38bdf8" /> Dedicated Account Manager</li>
+          <li><CheckCircle2 color="#38bdf8" /> 100% Transparent Pricing</li>
         </ul>
-
+        
         <div className="contact-actions">
-          <a
-            href="https://wa.me/971585893680"  // Use your WhatsApp number here
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-button"
-          >
-            Start a Chat
-          </a>
-        <button className="contact-button secondary" onClick={onInquiryClick}>
-            Send Your Inquiry</button>
+          <button className="premium-btn cta-scroll-btn" onClick={onInquiryClick}>
+            Get Started Now <ArrowUpCircle size={20} className="icon-up" />
+          </button>
         </div>
-
       </div>
-    </section>
+    </div>
   );
 }

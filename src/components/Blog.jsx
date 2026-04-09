@@ -2,23 +2,23 @@ import React from 'react';
 import './Blog.css';
 import { Link } from 'react-router-dom';
 
-// Sample blog posts
+// Sample blog posts targeting UAE intent
 const blogPosts = [
   {
-    title: "How to Start a Free Zone Company in Dubai",
-    excerpt: "Step-by-step guide to register your Free Zone company efficiently in 2025...",
+    title: "How to set up a business in Dubai 2026",
+    excerpt: "Everything you need to know about the latest DED regulations, visa updates, and steps to successfully launch your business in Dubai this year.",
     img: "https://images.unsplash.com/photo-1605902711622-cfb43c4439b6?auto=format&fit=crop&w=800&q=80",
     link:  "/contact"
   },
   {
-    title: "Mainland vs Offshore: Which is Best for You?",
-    excerpt: "Compare UAE Mainland and Offshore companies to choose the right structure for your business...",
+    title: "Top UAE business laws you should know",
+    excerpt: "Stay compliant and avoid penalties. A deep dive into the recent Corporate Tax updates, Emiratization laws, and labor regulations.",
     img: "https://images.unsplash.com/photo-1581092795363-9d3b1f6c3b2f?auto=format&fit=crop&w=800&q=80",
     link: "/contact"
   },
   {
-    title: "Top 5 Mistakes to Avoid in Company Formation",
-    excerpt: "Avoid common pitfalls when setting up a business in the UAE...",
+    title: "Tips for foreign investors in UAE",
+    excerpt: "A comprehensive guide on 100% foreign ownership, choosing the right free zone, and navigating the UAE banking system as an expat.",
     img: "https://images.unsplash.com/photo-1581092027025-92d6c54c3bb5?auto=format&fit=crop&w=800&q=80",
     link: "/contact"
   },

@@ -1,17 +1,14 @@
 import React from 'react'; 
 import './nav.css';
 import group8 from '../images/group87.png';
-import { Briefcase, Users2, Megaphone, ClipboardList, Building2, Calculator } from 'lucide-react'; // Import icons
-import web from '../images/wformg.png'; // Import your logo file
-import blog from '../images/blog.png'; // Import your logo file
-import Wiki from '../images/wiki.png'; // Import your logo file
+import { Briefcase, Users2, Megaphone, ClipboardList, Building2, Calculator, HelpCircle, FileText, Library } from 'lucide-react'; // Import icons
 
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light ">
       <div className="container-fluid nav-fluid">
         <a className="navbar-brand log" href="/">
-          <img className="logo-img mr-3" src={group8} alt="" width="268" height="52" />
+          <img className="logo-img mr-3" src={group8} alt="BizWize UAE Logo" width="268" height="52" />
         </a>
        <button
   className="navbar-toggler"
@@ -161,7 +158,7 @@ function Navbar() {
                   <a className='link' href="/faq">
                     <div className="platform-text rs-text">
                       <h6 className="hedrop">
-                        <i><img className='pv me-2' src={web} alt="" /></i>FAQs
+                        <i><HelpCircle className='me-2' size={22} color="#38bdf8" /></i>FAQs
                       </h6>
                     </div>
                   </a>
@@ -170,7 +167,7 @@ function Navbar() {
                   <a className='link' href="/blog">
                     <div className="platform-text rs-text">
                       <h6 className="hedrop">
-                        <i><img className='pv me-2' src={blog} alt="" /></i>Blog
+                        <i><FileText className='me-2' size={22} color="#38bdf8" /></i>Blog
                       </h6>
                     </div>
                   </a>
@@ -179,7 +176,7 @@ function Navbar() {
                   <a className='link' href="/wiki">
                     <div className="platform-text rs-text">
                       <h6 className="hedrop">
-                        <i><img className='pv me-2' src={Wiki} alt="" /></i>Wiki
+                        <i><Library className='me-2' size={22} color="#38bdf8" /></i>Wiki
                       </h6>
                     </div>
                   </a>

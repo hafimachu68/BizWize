@@ -1,246 +1,151 @@
-.why-chat-container {
-  font-family: 'Segoe UI', sans-serif;
-  /* Combine your existing gradient with a subtle semi-transparent overlay gradient */
- background: linear-gradient(to bottom left, #f9fafb, #e7f0ff);
-  padding: 4rem 1.5rem;
+.why-premium-container {
+  font-family: 'Inter', sans-serif;
+  background: #0f172a; /* Slightly lighter than hero for depth (#020617 -> #0f172a) */
+  padding: 6rem 1.5rem;
   position: relative;
   overflow: hidden;
   z-index: 1;
-  min-height: 100vh;
+}
+
+.why-bg-glow {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(14,165,233,0.08) 0%, transparent 60%);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .why-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   position: relative;
   z-index: 2;
 }
 
-.why-header h1 {
- font-size: 3rem;
-    font-weight: 800;
-    color: #1e3a8a;
-    margin-bottom: 1rem;
-    animation: fadeInUp 1s ease-out forwards;
+.why-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff !important;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+  transition: all 0.4s ease;
+  cursor: default;
 }
 
-.why-header h1 span {
-  color: #2563eb;
+.why-header h2:hover .text-glow {
+  filter: hue-rotate(45deg) brightness(1.2);
+  text-shadow: 0 0 50px rgba(56, 189, 248, 0.8);
 }
 
 .subtitle {
   font-size: 1.15rem;
-  color: #475569;
-  margin-top: 0.5rem;
+  color: #94a3b8;
+  max-width: 600px;
+  margin-inline: auto;
 }
 
-/* Chat Section */
-.chat-section {
-  max-width: 900px;
+/* 3-Column Glass Grid */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.glass-panel {
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 3.5rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  position: relative;
-  z-index: 2;
-}
-
-.chat-bubble {
-  display: flex;
-  max-width: 650px;
-  padding: 1.25rem 1.5rem;
-  border-radius: 1.5rem;
-  background: linear-gradient(135deg, #a3cef1, #d7e8fb); /* light gradient */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  animation-name: fadeInUpBounce;
-  animation-duration: 0.7s;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  align-items: center;
+  animation: fadeUpPanel 0.8s ease-out forwards;
   opacity: 0;
-  transition:
-    background 0.4s ease,
-    box-shadow 0.4s ease,
-    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  color: #1e40af;
-  cursor: default;
+  transform: translateY(20px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-.chat-bubble.left {
-  align-self: flex-start;
-  border-top-left-radius: 0;
-  background: linear-gradient(135deg, #a3cef1, #d7e8fb);
+@keyframes fadeUpPanel {
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.chat-bubble.right {
-  align-self: flex-end;
-  border-top-right-radius: 0;
-  background: linear-gradient(135deg, #b5defb, #c6e1ff);
+.glass-panel:hover {
+  transform: translateY(-8px);
+  background: rgba(30, 41, 59, 0.8);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(56, 189, 248, 0.2);
 }
 
-/* Hover effect */
-.chat-bubble:hover {
-  background: linear-gradient(135deg, #8bbbe8, #a1c9fa); /* slightly darker */
-  box-shadow:
-    0 0 12px 3px rgba(37, 99, 235, 0.4),
-    0 6px 18px rgba(37, 99, 235, 0.25);
-  transform: scale(1.03);
-  z-index: 10;
+.panel-icon-wrapper {
+  color: #38bdf8;
+  margin-bottom: 1.5rem;
+  transition: all 0.5s ease;
 }
 
-
-.chat-icon {
-  font-size: 2rem;
-  margin-right: 1rem;
-  margin-top: 0.25rem;
+.glass-panel:hover .panel-icon-wrapper {
+  color: #fff;
+  transform: scale(1.1) rotate(-5deg);
+  filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.6));
 }
 
-.chat-content h3 {
-  margin: 0;
-  font-size: 1.25rem;
-  color: #1d4ed8;
+.glass-panel h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 1rem;
 }
 
-.chat-content p {
-  margin: 0.5rem 0 0;
-  color: #475569;
+.glass-panel p {
+  font-size: 1rem;
+  color: #94a3b8;
+  line-height: 1.6;
 }
 
-/* CTA Section */
-.chat-cta {
-  margin-top: 4rem;
+.why-cta-wrapper {
+  margin-top: 5rem;
   text-align: center;
-  background: linear-gradient(to right, #2563eb, #38bdf8);
-  padding: 3rem 2rem;
-  border-radius: 2rem;
-  color: white;
-  z-index: 2;
   position: relative;
+  z-index: 2;
 }
 
-.chat-cta h2 {
-  font-size: 2rem;
+.cta-strong {
+  background: linear-gradient(135deg, #2563eb, #0284c7);
+  padding: 16px 36px;
+  border-radius: 99px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: none;
 }
 
-.chat-cta p {
-  font-size: 1.15rem;
-  margin: 1rem 0;
+.cta-strong:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.5);
+  background: linear-gradient(135deg, #1d4ed8, #0369a1);
 }
 
-.chat-button {
-  
-  border: solid;
-  border-radius: 999px;
-  
+@media (max-width: 768px) {
+  .why-header h2 { font-size: 2.5rem; }
+  .glass-panel { padding: 2.5rem 1.5rem; }
 }
 
-
-
-@keyframes fadeInUpBounce {
-  0% {
-    opacity: 0;
-    transform: translateY(40px) scale(0.98);
-  }
-  60% {
-    opacity: 1;
-    transform: translateY(-10px) scale(1.03);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+.text-glow {
+  background: linear-gradient(to right, #38bdf8, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  text-shadow: 0 0 35px rgba(56, 189, 248, 0.3);
 }
-
-/* Animated background grid */
-.grid-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(circle, rgba(0,0,0,0.02) 1px, transparent 1px);
-  background-size: 40px 40px;
-  z-index: 0;
-  animation: gridMove 20s linear infinite;
-}
-
-@keyframes gridMove {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 80px 80px;
-  }
-}/* Icon Background Layer */
-.icon-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* Floating emojis/icons */
-.icon-float {
-  position: absolute;
-  font-size: 2.5rem;
-  opacity: 0.07;
-  animation: floatIcons 20s ease-in-out infinite alternate;
-  color: #2563eb;
-}
-
-/* Animate float */
-@keyframes floatIcons {
-  0% {
-    transform: translateY(0px) scale(1) rotate(0deg);
-    opacity: 0.08;
-  }
-  50% {
-    transform: translateY(-15px) scale(1.1) rotate(4deg);
-    opacity: 0.12;
-  }
-  100% {
-    transform: translateY(0px) scale(1) rotate(0deg);
-    opacity: 0.08;
-  }
-}
-
-
-/* Specific Positions */
-.icon1  { top: 5%;   left: 3%;   animation-delay: 0s; }
-.icon2  { top: 15%;  left: 25%;  animation-delay: 1s; }
-.icon3  { top: 20%;  left: 50%;  animation-delay: 2s; }
-.icon4  { top: 10%;  left: 75%;  animation-delay: 3s; }
-
-.icon5  { top: 35%;  left: 10%;  animation-delay: 1.5s; }
-.icon6  { top: 40%;  left: 45%;  animation-delay: 2.5s; }
-.icon7  { top: 30%;  left: 80%;  animation-delay: 0.5s; }
-
-.icon8  { top: 60%;  left: 5%;   animation-delay: 2s; }
-.icon9  { top: 65%;  left: 30%;  animation-delay: 3.5s; }
-.icon10 { top: 70%;  left: 60%;  animation-delay: 1.8s; }
-.icon11 { top: 60%;  left: 85%;  animation-delay: 2.8s; }
-
-.icon12 { top: 85%;  left: 50%;  animation-delay: 3.2s; }
-
-/* SVG Pattern Layer */
-.svg-pattern {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='%232563eb' fill-opacity='0.035' /%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,100 Q50,0 100,100' stroke='%232563eb' stroke-opacity='0.03' fill='transparent'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 80px 80px, 200px 200px;
-  z-index: 0;
-  animation: patternMove 80s linear infinite;
-  pointer-events: none;
-}
-
-/* Subtle scroll on the pattern */
-@keyframes patternMove {
-  0% { background-position: 0 0, 0 0; }
-  100% { background-position: 100px 100px, -200px -200px; }
-}
-

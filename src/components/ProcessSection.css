@@ -1,0 +1,103 @@
+.process-premium-wrapper {
+  background: #0f172a; /* Slightly lighter inner-band */
+  padding: 6rem 2rem;
+  font-family: 'Inter', sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  z-index: 5;
+}
+
+.process-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.process-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #fff !important;
+  margin-bottom: 1rem;
+  transition: all 0.4s ease;
+  cursor: default;
+}
+
+.process-title:hover .text-glow {
+  filter: hue-rotate(45deg) brightness(1.2);
+  text-shadow: 0 0 50px rgba(56, 189, 248, 0.8);
+}
+
+.process-subtitle {
+  color: #94a3b8;
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.process-timeline {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1250px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.process-card {
+  flex: 1;
+  min-width: 320px;
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.process-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(56, 189, 248, 0.3);
+  background: rgba(30, 41, 59, 0.8);
+}
+
+.step-icon {
+  width: 90px;
+  height: 90px;
+  background: rgba(37, 99, 235, 0.1);
+  color: #38bdf8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  border: 1px dashed rgba(56, 189, 248, 0.5);
+  transition: all 0.5s ease;
+}
+
+.process-card:hover .step-icon {
+  background: #2563eb;
+  color: #fff;
+  border-style: solid;
+  transform: rotate(10deg) scale(1.15);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
+}
+
+.process-card h3 {
+  font-size: 1.6rem;
+  color: #f8fafc;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.process-card p {
+  color: #94a3b8;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 992px) {
+  .process-timeline { flex-direction: column; align-items: center; }
+  .process-card { width: 100%; max-width: 500px; }
+  .process-title { font-size: 2.5rem; }
+}
