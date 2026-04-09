@@ -32,13 +32,13 @@ export default function Contact() {
         <div className="info-card">
           <div className="icon-wrapper"><MapPin className="icon" /></div>
           <h3>Our Office</h3>
-          <p>BizWize UAE<br />Office 12, Deira, Dubai, United Arab Emirates</p>
+          <p>BizWize UAE<br />: Abuhail Centre, Habtoor Building - office GR14 Abu Hail St - Hor Al Anz East - Deira - Dubai</p>
         </div>
 
         <div className="info-card">
           <div className="icon-wrapper"><Phone className="icon" /></div>
           <h3>Call Us</h3>
-          <p>+971 56 414 9648<br />+971 4 555 1234</p>
+          <p>+97158 589 3680<br />+971 58 566 3680</p>
         </div>
 
         <div className="info-card">
@@ -50,7 +50,7 @@ export default function Contact() {
         <div className="info-card">
           <div className="icon-wrapper"><Clock className="icon" /></div>
           <h3>Working Hours</h3>
-          <p>Mon – Sat: 9:00 AM – 6:00 PM<br />Sunday: Closed</p>
+          <p>Mon – Sat: 9:00 AM – 9:00 PM<br />Sunday: Closed</p>
         </div>
       </section>
 

@@ -8,37 +8,37 @@ const serviceData = [
     icon: <Briefcase size={36} />,
     title: 'Business Set up',
     desc: 'End-to-end support for company formation, licensing, and government approvals in the UAE.',
-    link: '/services/business-setup',
+    link: '/business-setup',
   },
   {
     icon: <Users2 size={36} />,
     title: 'HR Solutions',
     desc: 'Comprehensive HR outsourcing, recruitment, and employee management services tailored to your business.',
-    link: '/services/hr-solutions',
+    link: '/hr-solutions',
   },
   {
     icon: <Megaphone size={36} />,
     title: 'Digital Marketing',
     desc: 'Boost your online visibility with expert social media, SEO, and paid ad campaigns that deliver results.',
-    link: '/services/digital-marketing',
+    link: '/digital-marketing',
   },
   {
     icon: <ClipboardList size={36} />,
     title: 'Management Consultancy',
     desc: 'Strategic guidance to optimize operations, improve efficiency, and ensure sustainable business growth.',
-    link: '/services/management-consultancy',
+    link: '/management-consultancy',
   },
   {
     icon: <Building2 size={36} />,
     title: 'Facility Management',
     desc: 'Reliable facility maintenance, cleaning, and support services for commercial and residential properties.',
-    link: '/services/facility-management',
+    link: '/facility-management',
   },
   {
     icon: <Calculator size={36} />,
     title: 'Accounting and Bookkeeping',
     desc: 'Accurate, compliant financial management and bookkeeping for smooth business operations.',
-    link: '/services/accounting-bookkeeping',
+    link: '/accounting-bookkeeping',
   },
 ];
 
