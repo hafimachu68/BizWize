@@ -1,41 +1,17 @@
-import React, { useState, useRef, useImperativeHandle, forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
-import freezoneImg from '../images/freez1.jpeg';
-import mainlandImg from '../images/freez2.jpeg';
-import offshoreImg from '../images/freez3.jpeg';
-import biz1 from '../images/biz11.jpeg';
-import biz2 from '../images/biz22.jpeg';
+import freezoneImg from '../images/banner44.png';
+import offshoreImg from '../images/newbanner.png';
+import biz1 from '../images/banner6.png';
+import biz2 from '../images/banner7.png';
+import biz3 from '../images/banner3.png';
+
 
 
 import './HeroSection.css';
 
 const HeroSection = forwardRef((props, ref) => {
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
-  const [toast, setToast] = useState(false);
-  const formRef = useRef(null); // ✅ This line fixes the error
-
- // ✅ Expose scrollToForm to parent via ref
-  useImperativeHandle(ref, () => ({
-    scrollToForm: () => {
-      formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  }));
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    await fetch("https://formspree.io/f/mnqeyojv", {
-      method: "POST",
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData)
-    });
-    setToast(true);
-    setFormData({ name: '', email: '', phone: '', message: '' });
-    setTimeout(() => setToast(false), 4000);
-  };
 
   const handleCallClick = () => {
     window.location.href = 'tel:+971501234567';
@@ -43,7 +19,7 @@ const HeroSection = forwardRef((props, ref) => {
 
   const slides = [
     {
-      image: biz1,
+      image: offshoreImg,
       // title: 'Free Zone Company Setup',
       // subtext: 'DMCC, RAKEZ, SHAMS & more',
       // price: 'From AED 5,750',
@@ -56,15 +32,23 @@ const HeroSection = forwardRef((props, ref) => {
       // price: 'From AED 5,750',
       features: ['100% Ownership', 'Zero Tax', 'Flexible Visas']
     },
+    
     {
-      image: mainlandImg,
+      image: biz3,
       title: 'Mainland Business Setup',
       subtext: 'Operate across UAE',
       price: 'From AED 10,999',
       features: ['No Local Sponsor', 'Ejari Included', 'Fast Licensing']
     },
     {
-      image: offshoreImg,
+      image: freezoneImg,
+      title: 'Mainland Business Setup',
+      subtext: 'Operate across UAE',
+      price: 'From AED 10,999',
+      features: ['No Local Sponsor', 'Ejari Included', 'Fast Licensing']
+    },
+    {
+      image: biz1,
       title: 'Offshore Company Formation',
       subtext: 'Ajman Offshore, RAK ICC, JAFZA',
       price: 'From USD 2,100',
@@ -81,18 +65,6 @@ const HeroSection = forwardRef((props, ref) => {
       </Carousel.Item>
     ))}
   </Carousel>
-
-  <div className="custom-hero-form" ref={formRef}>
-    <h2>Get a Free Consultation</h2>
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required />
-      <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
-      <input type="tel" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} required />
-      <textarea name="message" placeholder="Your Message" rows="3" value={formData.message} onChange={handleChange} required></textarea>
-      <button type="submit">Enquiry</button>
-    </form>
-    {toast && <div className="custom-toast">✅ Submitted! We'll reach out shortly.</div>}
-  </div>
 
   <div className="custom-call-now" onClick={handleCallClick}>
     📞 <span>We’ll call you just after 30 minutes</span>
