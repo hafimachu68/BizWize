@@ -701,4 +701,83 @@ color: gray;
 
 .link {
   text-decoration: none !important;
+}
+
+/* ========================================================
+   MOBILE NAVBAR OVERRIDES (GLASSMORPHISM RESPONSIVE FIX)
+   ======================================================== */
+@media (max-width: 991px) {
+  /* Prevent dropdown from overflowing horizontally */
+  .navbar .platform-menu, 
+  .navbar .uecase-menu,
+  .navbar .dropdown-menu {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100vw !important;
+    box-sizing: border-box;
+    padding: 0 !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin-top: 0.5rem !important;
+    position: static !important;
+    float: none !important;
+  }
+
+  /* Force Bootstrap columns inside the dropdown to stack */
+  .platform-menu .row {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .platform-menu .col-6 {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Style mobile dropdown items distinctively for dark navbar */
+  .platform-item, .rsec-item {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    margin-bottom: 0.8rem !important;
+    padding: 1rem !important;
+  }
+  
+  .platform-item:hover, .rsec-item:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  /* Adjust text colors to suit the dark mobile navbar */
+  .hedrop {
+    color: #f8fafc !important;
+  }
+
+  .dropara {
+    color: #94a3b8 !important;
+  }
+
+  /* Align main links and buttons */
+  .nav-item {
+    margin-top: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  }
+
+  .nav-item.demo {
+    margin-left: 0 !important;
+    margin-top: 1rem !important;
+    border-bottom: none !important;
+  }
+  
+  .nav-item.demo .digiwize-link {
+    width: 100%;
+  }
+  
+  .btnavdigi {
+    width: 100%;
+  }
+
+  .nav-link {
+    color: #f8fafc !important;
+  }
 }

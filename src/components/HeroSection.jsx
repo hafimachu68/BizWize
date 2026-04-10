@@ -11,11 +11,7 @@ const HeroSection = forwardRef((props, ref) => {
     }
   }));
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Simulate generic submission UI interaction
-    alert("Thanks for your inquiry! Our team will contact you shortly.");
-  };
+
 
   return (
     <section className="premium-hero-container">
@@ -64,15 +60,18 @@ const HeroSection = forwardRef((props, ref) => {
           <div className="glass-form-card">
             <h3>Request Free Consultation</h3>
             <p>Speak directly with a UAE corporate advisor today.</p>
-            <form onSubmit={handleSubmit} className="hero-opt-in">
+            <form action="https://formsubmit.co/info@bizwizeuae.com" method="POST" className="hero-opt-in">
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://www.bizwizeuae.com/thankyou" />
+
               <div className="input-group">
-                <input type="text" placeholder="Full Name" required />
+                <input type="text" name="Full Name" placeholder="Full Name" required />
               </div>
               <div className="input-group">
-                <input type="tel" placeholder="Phone Number" required />
+                <input type="tel" name="Phone Number" placeholder="Phone Number" required />
               </div>
               <div className="input-group">
-                <select required>
+                <select name="Service" required>
                   <option value="">Select Structure</option>
                   <option value="mainland">Mainland Setup</option>
                   <option value="freezone">Freezone Setup</option>

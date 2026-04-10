@@ -63,7 +63,7 @@ export default function LocationPage({ locationId }) {
              <h3><MapPin className="inline-icon" /> Regional Office Contact</h3>
              <p><strong>HQ Address:</strong> Abuhail Centre, Habtoor Building, Office GR14 Abu Hail St, Deira, Dubai.</p>
              <p><strong>Regional Servicing:</strong> Full coverage throughout {data.city}.</p>
-             <p><strong><Phone className="inline-icon" /> Support:</strong> +971585893680</p>
+             <p><strong><Phone className="inline-icon" /> Support:</strong> +971585663680</p>
           </div>
 
           <div className="testimonial-box">
