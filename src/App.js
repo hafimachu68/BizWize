@@ -16,6 +16,7 @@ import AccountingBookkeeping from './Pages/AccountingBookkeeping';
 import ThankYou from './Pages/ThankYou';
 import FAQs from './Pages/FAQs';
 import Blog from './components/Blog';
+import BlogDetail from './components/BlogDetail';
 import Wiki from './components/Wiki';
 import LocationPage from './Pages/LocationPage';
 
@@ -44,6 +45,7 @@ function App() {
              <Route path="/contact" element={<Contact/>} />
                         <Route path="/faq" element={<FAQs/>} />
                         <Route path="/blog" element={<Blog/>} />
+                        <Route path="/blog/:slug" element={<BlogDetail/>} />
                         <Route path="/wiki" element={<Wiki/>} />
 
                      <Route path="/thankyou" element={<ThankYou/>} />
