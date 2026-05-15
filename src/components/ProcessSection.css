@@ -1,16 +1,17 @@
 .process-premium-wrapper {
-  background: #0f172a; /* Slightly lighter inner-band */
-  padding: 6rem 2rem;
+  background: #0f172a;
+  padding: 8rem 2rem;
   font-family: 'Inter', sans-serif;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
   z-index: 5;
+  overflow: hidden;
 }
 
 .process-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .process-title {
@@ -18,86 +19,334 @@
   font-weight: 800;
   color: #fff !important;
   margin-bottom: 1rem;
-  transition: all 0.4s ease;
-  cursor: default;
-}
-
-.process-title:hover .text-glow {
-  filter: hue-rotate(45deg) brightness(1.2);
-  text-shadow: 0 0 50px rgba(56, 189, 248, 0.8);
+  letter-spacing: -1px;
 }
 
 .process-subtitle {
   color: #94a3b8;
   font-size: 1.15rem;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
-.process-timeline {
+/* Interactive Container */
+.process-interactive-container {
   display: flex;
-  justify-content: center;
-  gap: 3rem;
-  max-width: 1250px;
+  gap: 40px;
+  max-width: 1300px; /* Made slightly wider to accommodate images nicely */
   margin: 0 auto;
-  flex-wrap: wrap;
+  align-items: stretch; /* Make both columns same height */
 }
 
-.process-card {
-  flex: 1;
-  min-width: 320px;
-  background: rgba(30, 41, 59, 0.4);
-  backdrop-filter: blur(16px);
+/* Sidebar Tabs */
+.process-sidebar {
+  flex: 0 0 350px; /* Fixed width for sidebar */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.process-tab {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 25px;
+  background: rgba(30, 41, 59, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  padding: 3.5rem 2.5rem;
-  text-align: center;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.process-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(56, 189, 248, 0.3);
-  background: rgba(30, 41, 59, 0.8);
+.process-tab:hover {
+  background: rgba(30, 41, 59, 0.6);
+  transform: translateX(5px);
 }
 
-.step-icon {
-  width: 90px;
-  height: 90px;
-  background: rgba(37, 99, 235, 0.1);
+.process-tab.active {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(56, 189, 248, 0.2);
+  transform: translateX(10px);
+}
+
+.tab-progress-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #38bdf8;
+  transform: scaleY(0);
+  transition: transform 0.4s ease;
+  transform-origin: top;
+}
+
+.process-tab.active .tab-progress-line {
+  transform: scaleY(1);
+}
+
+.tab-number {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #64748b;
+  transition: color 0.3s ease;
+}
+
+.process-tab.active .tab-number {
   color: #38bdf8;
-  border-radius: 50%;
+}
+
+.tab-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  transition: color 0.3s ease;
+}
+
+.process-tab.active .tab-title {
+  color: #fff;
+}
+
+/* Right Content Display */
+.process-content-display {
+  flex: 1;
+  position: relative;
+  perspective: 1000px;
+  display: flex;
+}
+
+.display-inner-card {
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.8));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  width: 100%;
+}
+
+.display-content-col {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  animation: slideRight 0.4s ease-out;
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.display-image-col {
+  flex: 0.8;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+.step-image-fade {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: imageFadeIn 0.6s ease-out forwards;
+}
+
+@keyframes imageFadeIn {
+  from { opacity: 0; transform: scale(1.05); }
+  to { opacity: 0.8; transform: scale(1); } /* 0.8 opacity to match dark theme better */
+}
+
+/* Gradient overlay to blend image edge with card background */
+.image-overlay-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to right, rgba(15, 23, 42, 1) 0%, rgba(15, 23, 42, 0) 50%);
+  pointer-events: none;
+}
+
+.display-icon-wrapper {
+  color: #38bdf8;
+  margin-bottom: 30px;
+  background: rgba(56, 189, 248, 0.1);
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 2rem;
-  border: 1px dashed rgba(56, 189, 248, 0.5);
-  transition: all 0.5s ease;
+  border-radius: 20px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
 }
 
-.process-card:hover .step-icon {
-  background: #2563eb;
+.display-number-bg {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 10rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  line-height: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.display-text-content {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 40px;
+}
+
+.display-text-content h3 {
+  font-size: 2rem;
+  font-weight: 800;
   color: #fff;
-  border-style: solid;
-  transform: rotate(10deg) scale(1.15);
-  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
+  margin-bottom: 15px;
+  line-height: 1.2;
 }
 
-.process-card h3 {
-  font-size: 1.6rem;
-  color: #f8fafc;
-  margin-bottom: 1.2rem;
-  font-weight: 700;
-}
-
-.process-card p {
+.display-text-content p {
+  font-size: 1.1rem;
   color: #94a3b8;
   line-height: 1.7;
+}
+
+/* Actions */
+.display-actions {
+  position: relative;
+  z-index: 1;
+  margin-top: auto; /* Push to bottom if content is short */
+}
+
+.next-step-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 14px 28px;
+  border-radius: 12px;
   font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.next-step-btn:hover {
+  background: rgba(56, 189, 248, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.1);
+}
+
+.final-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+}
+
+.final-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .display-inner-card {
+    flex-direction: column;
+  }
+  .display-image-col {
+    height: 250px;
+    flex: none;
+    order: -1; /* Put image at the top on small screens */
+  }
+  .image-overlay-gradient {
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0) 50%, rgba(15, 23, 42, 1) 100%);
+  }
 }
 
 @media (max-width: 992px) {
-  .process-timeline { flex-direction: column; align-items: center; }
-  .process-card { width: 100%; max-width: 500px; }
-  .process-title { font-size: 2.5rem; }
+  .process-interactive-container {
+    flex-direction: column;
+  }
+  
+  .process-sidebar {
+    width: 100%;
+    flex-basis: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .process-tab {
+    flex: 1 1 calc(50% - 15px);
+    padding: 15px;
+  }
+  
+  .process-tab:hover,
+  .process-tab.active {
+    transform: translateY(-5px);
+  }
+  
+  .tab-progress-line {
+    width: 100%;
+    height: 4px;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  
+  .process-tab.active .tab-progress-line {
+    transform: scaleX(1);
+  }
+  
+  .process-content-display {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .process-tab {
+    flex: 1 1 100%;
+  }
+  
+  .display-content-col {
+    padding: 30px 25px;
+  }
+  
+  .display-text-content h3 {
+    font-size: 1.6rem;
+  }
+  
+  .display-number-bg {
+    font-size: 6rem;
+  }
 }

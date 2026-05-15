@@ -3,6 +3,7 @@ import HeroSection from '../components/HeroSection';
 import Services from '../components/Services';
 import WhyChooseUs from '../components/WhyChooseUs';
 import ProcessSection from '../components/ProcessSection';
+import PricingPackages from '../components/PricingPackages';
 import ContactPrompt from '../components/ContactPrompt';
 import WhatsAppButton from '../components/WhatsAppButton';
 import SuccessBanner from '../components/SuccessBanner';
@@ -54,6 +55,7 @@ export default function Home() {
       <HeroSection ref={heroRef} />
       <SuccessBanner/>
       <Services />
+      <PricingPackages onGetStarted={scrollToHeroForm} />
       <ProcessSection />
       <WhyChooseUs />
       <ContactPrompt onInquiryClick={scrollToHeroForm} />

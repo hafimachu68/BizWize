@@ -76,9 +76,12 @@
 }
 
 .hero-text-block {
-  flex: 1.1;
+  flex: 1;
   animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  min-width: 0; /* Allows text to wrap properly and respect flex boundary */
 }
+
+/* ... animations omitted from matching here, doing a more specific replacement ... */
 
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
@@ -87,25 +90,26 @@
 
 .hero-badge {
   display: inline-block;
-  padding: 6px 16px;
+  padding: 6px 14px;
   border-radius: 30px;
-  background: rgba(56, 189, 248, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  color: #38bdf8;
-  font-size: 0.85rem;
-  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f8fafc;
+  font-size: 0.75rem;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   backdrop-filter: blur(8px);
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: 3.8rem;
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.5rem;
   letter-spacing: -1.5px;
+  /* Removed white-space: nowrap so it doesn't crush the form on smaller monitors */
 }
 
 .text-glow {
@@ -121,7 +125,7 @@
   color: #94a3b8;
   line-height: 1.6;
   margin-bottom: 3rem;
-  max-width: 95%;
+  max-width: 520px; /* Forces exactly 2.5 lines of text */
 }
 
 /* Stats Row */
@@ -178,7 +182,7 @@
 
 /* Glassmorphism Form Setup */
 .hero-form-block {
-  flex: 0.9;
+  flex: 1;
   display: flex;
   justify-content: flex-end;
   animation: fadeInRight 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -278,7 +282,8 @@
   .hero-content-wrapper { flex-direction: column; text-align: center; gap: 4rem; }
   .hero-form-block { justify-content: center; width: 100%; }
   .hero-stats-row { justify-content: center; border-top: none; padding-top: 0; }
-  .hero-subtitle { margin-inline: auto; }
+  .hero-subtitle { margin-inline: auto; max-width: 600px; }
+  .hero-title { white-space: normal; font-size: 3.5rem; }
 }
 
 @media (max-width: 576px) {

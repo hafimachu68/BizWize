@@ -27,8 +27,8 @@ const HeroSection = forwardRef((props, ref) => {
         <div className="hero-text-block">
           <div className="badge hero-badge">Premium Business Setup UAE</div>
           <h1 className="hero-title">
-            Establish Your Future in 
-            <span className="text-glow"> Dubai.</span>
+            Establish Your Future <br />
+            in<span className="text-glow">Dubai.</span>
           </h1>
           <p className="hero-subtitle">
             Seamless mainland, freezone, and offshore company formation. 

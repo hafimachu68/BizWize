@@ -19,6 +19,7 @@ import Blog from './components/Blog';
 import BlogDetail from './components/BlogDetail';
 import Wiki from './components/Wiki';
 import LocationPage from './Pages/LocationPage';
+import BiziGPT from './Pages/BiziGPT';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
                         <Route path="/wiki" element={<Wiki/>} />
 
                      <Route path="/thankyou" element={<ThankYou/>} />
+                     <Route path="/bizigpt" element={<BiziGPT/>} />
           </Routes>
         </div>
         <Footer />

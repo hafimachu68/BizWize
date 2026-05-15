@@ -483,6 +483,16 @@ color: gray;
   margin-right: 4rem; /* Reduce the right margin to decrease the gap */
 }
 
+.bizi-demo {
+  margin-left: 2rem;
+}
+
+/* Align all nav items properly */
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+
 
 
 /* @media (max-width: 768px) {
@@ -521,6 +531,7 @@ color: gray;
   transition: color 0.3s ease, transform 0.3s ease !important;
   position: relative;
   padding: 0.4rem 0.8rem !important; /* REDUCED PADDING */
+  white-space: nowrap !important; /* Forces text like 'About Us' onto one line */
 }
 
 .nav-link:hover, .nav-link.active {
@@ -547,20 +558,27 @@ color: gray;
 
 /* Glassmorphism Dropdowns */
 .navbar .dropdown-menu {
-  background: rgba(255, 255, 255, 0.95) !important;
+  background: rgba(255, 255, 255, 0.98) !important;
   backdrop-filter: blur(24px) !important;
   border: 1px solid rgba(255, 255, 255, 0.4) !important;
-  border-radius: 12px !important; /* REDUCED BORDER RADIUS */
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.5) inset !important;
-  padding: 1rem !important; /* REDUCED PADDING */
-  margin-top: 0.5rem !important; /* REDUCED MARGIN */
+  border-radius: 12px !important;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.5) inset !important;
+  padding: 1rem !important;
+  margin-top: 0 !important; /* IMPORTANT: removed gap so hover doesn't break */
   transition: all 0.3s ease;
-  display: none; /* Bootstrap handles default toggle, but we will force hover on desktop */
+  z-index: 1060 !important;
+  
+  /* FIX FOR CHOPPED DROPDOWN: Force it to always open downwards */
+  position: absolute !important;
+  top: 100% !important;
+  bottom: auto !important;
+  transform: none !important;
+  left: 0 !important;
 }
 
 @media (min-width: 992px) {
   .navbar .dropdown:hover > .dropdown-menu {
-    display: block;
+    display: block !important;
     animation: fadeInDrop 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
 }

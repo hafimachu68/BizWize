@@ -1,7 +1,7 @@
 import React from 'react'; 
 import './nav.css';
 import group8 from '../images/group87.png';
-import { Briefcase, Users2, Megaphone, ClipboardList, Building2, Calculator, HelpCircle, FileText, Library } from 'lucide-react'; // Import icons
+import { Briefcase, Users2, Megaphone, ClipboardList, Building2, Calculator, HelpCircle, FileText, Library, Bot } from 'lucide-react'; // Import icons
 
 function Navbar() {
   return (
@@ -80,7 +80,7 @@ function Navbar() {
                           <div className="platform-text">
                             <h6 className="hedrop">
                               <i><Megaphone size={24} className="me-2" /></i>
-                              Digital Marketing
+                              DigiWize
                             </h6>
                             <p className="dropara">
                               Boost your online visibility with expert social media, SEO, and paid ad campaigns that deliver results.
@@ -185,13 +185,18 @@ function Navbar() {
             </li>
 
           <li className="nav-item demo">
-  <a href="/digital-marketing" className="digiwize-link">
-    <button className="btn btnavdigi text-light" type="submit">
-      <span className="digi">Digi</span><span className="wize">Wize</span>
-      <div className="subtext">THE DIGITAL MARKETING COMPANY</div>
-    </button>
-  </a>
-</li>
+            <a href="/bizigpt" className="digiwize-link" style={{ textDecoration: 'none' }}>
+              <button className="btn btnavdigi text-light" type="button">
+                <div className="d-flex align-items-center justify-content-center">
+                  <Bot size={18} className="me-1" style={{ color: '#fff', marginBottom: '2px' }}/>
+                  <div>
+                    <span className="digi">Bizi</span><span className="wize">GPT</span>
+                  </div>
+                </div>
+                <div className="subtext">YOUR AI BUSINESS ADVISOR</div>
+              </button>
+            </a>
+          </li>
 
           </ul>
         </div>
