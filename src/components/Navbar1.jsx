@@ -140,6 +140,55 @@ function Navbar() {
                       </li>
                     </div>
                   </div>
+                  <div className="row">
+                    <div className="col-12 mt-3 mb-2">
+                      <h6 className="text-white ms-3" style={{ opacity: 0.6, fontSize: '0.85rem', textTransform: 'uppercase' }}>Specialized Setup</h6>
+                      <hr style={{ borderColor: 'rgba(255,255,255,0.1)', margin: '5px 15px 10px' }} />
+                    </div>
+                  </div>
+
+                  <div className="row">
+                    <div className="col-6">
+                      <li className="platform-item my-1">
+                        <a className="link" href="/mainland-business-setup-dubai">
+                          <div className="platform-text">
+                            <h6 className="hedrop" style={{ fontSize: '0.95rem' }}>Mainland Setup</h6>
+                          </div>
+                        </a>
+                      </li>
+                      <li className="platform-item my-1">
+                        <a className="link" href="/freezone-company-setup-uae">
+                          <div className="platform-text">
+                            <h6 className="hedrop" style={{ fontSize: '0.95rem' }}>Freezone Setup</h6>
+                          </div>
+                        </a>
+                      </li>
+                      <li className="platform-item my-1">
+                        <a className="link" href="/amazon-seller-account-uae">
+                          <div className="platform-text">
+                            <h6 className="hedrop" style={{ fontSize: '0.95rem' }}>Amazon / Noon Setup</h6>
+                          </div>
+                        </a>
+                      </li>
+                    </div>
+
+                    <div className="col-6">
+                      <li className="platform-item my-1">
+                        <a className="link" href="/food-license-dubai">
+                          <div className="platform-text">
+                            <h6 className="hedrop" style={{ fontSize: '0.95rem' }}>Food License Dubai</h6>
+                          </div>
+                        </a>
+                      </li>
+                      <li className="platform-item my-1">
+                        <a className="link" href="/cloud-kitchen-setup-dubai">
+                          <div className="platform-text">
+                            <h6 className="hedrop" style={{ fontSize: '0.95rem' }}>Cloud Kitchen Setup</h6>
+                          </div>
+                        </a>
+                      </li>
+                    </div>
+                  </div>
                 </div>
               </ul>
             </li>

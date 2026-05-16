@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import './App.css';
 import Navbar from './components/Navbar1';
 import Footer from './components/Footer';
 
@@ -21,6 +22,13 @@ import Wiki from './components/Wiki';
 import LocationPage from './Pages/LocationPage';
 import BiziGPT from './Pages/BiziGPT';
 
+/* Authority Pages */
+import MainlandSetup from './Pages/MainlandSetup';
+import FreezoneSetup from './Pages/FreezoneSetup';
+import FoodLicense from './Pages/FoodLicense';
+import CloudKitchen from './Pages/CloudKitchen';
+import AmazonSeller from './Pages/AmazonSeller';
+
 function App() {
   return (
     <HelmetProvider>
@@ -36,6 +44,13 @@ function App() {
           <Route path="/management-consultancy" element={<ManagementConsultancy/>} />
           <Route path="/facility-management" element={<FacilityManagement/>} />
           <Route path="/accounting-bookkeeping" element={<AccountingBookkeeping/>} />
+
+          {/* Authority Pages */}
+          <Route path="/mainland-business-setup-dubai" element={<MainlandSetup />} />
+          <Route path="/freezone-company-setup-uae" element={<FreezoneSetup />} />
+          <Route path="/food-license-dubai" element={<FoodLicense />} />
+          <Route path="/cloud-kitchen-setup-dubai" element={<CloudKitchen />} />
+          <Route path="/amazon-seller-account-uae" element={<AmazonSeller />} />
 
             {/* Location Pages */}
           <Route path="/location/dubai" element={<LocationPage locationId="dubai" />} />

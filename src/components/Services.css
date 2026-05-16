@@ -53,9 +53,9 @@
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  max-width: 1250px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 1300px;
   margin: 0 auto;
   justify-items: center;
   padding: 0 1rem;
@@ -69,18 +69,19 @@
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 24px;
-  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1.5rem;
+  gap: 1rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
   text-align: left;
   opacity: 0;
   transform: translateY(30px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .elegant-card.visible {
@@ -95,12 +96,19 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 40px rgba(56, 189, 248, 0.1);
 }
 
+.elegant-card:active {
+  transform: scale(0.95) rotate(2deg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  border-color: rgba(56, 189, 248, 0.8);
+  transition: all 0.1s ease;
+}
+
 /* Icon Gradient Container */
 .icon {
   background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(56, 189, 248, 0.1));
   color: #38bdf8;
-  width: 64px;
-  height: 64px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,8 +124,13 @@
   box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
 }
 
+.elegant-card:active .icon {
+  transform: scale(0.8) rotate(-15deg);
+  transition: all 0.1s ease;
+}
+
 .elegant-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #f8fafc;
   margin: 0;
@@ -125,10 +138,10 @@
 }
 
 .elegant-card p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #94a3b8;
   margin: 0;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 /* CTA inline button */
@@ -165,65 +178,10 @@
   width: 100%;
 }
 
-/* Services Footer CTA */
-.services-cta {
-  margin-top: 6rem;
-  padding: 4rem 3rem;
-  background: linear-gradient(135deg, rgba(30,58,138,0.2), rgba(2,132,199,0.1));
-  border: 1px solid rgba(56, 189, 248, 0.15);
-  border-radius: 24px;
-  max-width: 900px;
-  margin-inline: auto;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-  backdrop-filter: blur(10px);
-}
-
-.services-cta h4 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  color: #fff;
-  font-weight: 800;
-  letter-spacing: -1px;
-}
-
-.services-cta p {
-  color: #94a3b8;
-  margin-bottom: 2.5rem;
-  font-size: 1.15rem;
-  max-width: 600px;
-  margin-inline: auto;
-  line-height: 1.6;
-}
-
-.cta-button {
-  background: linear-gradient(135deg, #2563eb, #0284c7);
-  color: white;
-  padding: 16px 36px;
-  border-radius: 99px;
-  font-weight: 600;
-  font-size: 1.1rem;
-  text-decoration: none;
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
-  transition: all 0.4s ease;
-  display: inline-block;
-  border: none;
-}
-
-.cta-button:hover {
-  transform: translateY(-4px);
-  background: linear-gradient(135deg, #1d4ed8, #0369a1);
-  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.5);
-  color: #fff;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .services-header h2 { font-size: 2.4rem; }
   .elegant-card { padding: 2.5rem 2rem; }
-  .services-cta { padding: 3rem 1.5rem; }
-  .services-cta h4 { font-size: 1.8rem; }
 }
 
 @keyframes slideInText {

@@ -1,44 +1,68 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Services.css';
-import { Briefcase, Users2, Megaphone, ClipboardList, Building2, Calculator } from 'lucide-react';
+import { FileText, Utensils, ChefHat, Calculator, UserCheck, ShoppingCart, FileBadge, Home, FileCheck, Truck } from 'lucide-react';
 
 const serviceData = [
   {
-    icon: <Briefcase size={36} />,
-    title: 'Business Set up',
-    desc: 'End-to-end support for company formation, licensing, and government approvals in the UAE.',
+    icon: <FileText size={36} />,
+    title: 'Trade License',
+    desc: 'Fast and hassle-free mainland and freezone trade license issuance and renewals in the UAE.',
     link: '/business-setup',
   },
   {
-    icon: <Users2 size={36} />,
-    title: 'HR Solutions',
-    desc: 'Comprehensive HR outsourcing, recruitment, and employee management services tailored to your business.',
-    link: '/hr-solutions',
+    icon: <Utensils size={36} />,
+    title: 'Food License',
+    desc: 'Expert assistance in acquiring approvals from Dubai Municipality and relevant food authorities.',
+    link: '/business-setup',
   },
   {
-    icon: <Megaphone size={36} />,
-    title: 'Digital Marketing',
-    desc: 'Boost your online visibility with expert social media, SEO, and paid ad campaigns that deliver results.',
-    link: '/digital-marketing',
-  },
-  {
-    icon: <ClipboardList size={36} />,
-    title: 'Management Consultancy',
-    desc: 'Strategic guidance to optimize operations, improve efficiency, and ensure sustainable business growth.',
-    link: '/management-consultancy',
-  },
-  {
-    icon: <Building2 size={36} />,
-    title: 'Facility Management',
-    desc: 'Reliable facility maintenance, cleaning, and support services for commercial and residential properties.',
-    link: '/facility-management',
+    icon: <ChefHat size={36} />,
+    title: 'Kitchen Rental',
+    desc: 'Premium commercial kitchen spaces for rent in DIP, fully equipped and approved.',
+    link: '/business-setup',
   },
   {
     icon: <Calculator size={36} />,
-    title: 'Accounting and Bookkeeping',
-    desc: 'Accurate, compliant financial management and bookkeeping for smooth business operations.',
+    title: 'VAT Registration',
+    desc: 'Complete tax consultancy, accounting, and VAT registration services to keep you compliant.',
     link: '/accounting-bookkeeping',
+  },
+  {
+    icon: <UserCheck size={36} />,
+    title: 'PRO Services',
+    desc: 'Reliable corporate PRO services for document clearing, attestations, and government liaising.',
+    link: '/business-setup',
+  },
+  {
+    icon: <ShoppingCart size={36} />,
+    title: 'Amazon/Noon Setup',
+    desc: 'End-to-end e-commerce setup to launch your seller account on Amazon and Noon.',
+    link: '/digital-marketing',
+  },
+  {
+    icon: <FileBadge size={36} />,
+    title: 'Visa Services',
+    desc: 'Partner, employee, and golden visa processing with fast-track VIP services.',
+    link: '/hr-solutions',
+  },
+  {
+    icon: <Home size={36} />,
+    title: 'Ejari Services',
+    desc: 'Seamless commercial and residential Ejari registration and renewal assistance.',
+    link: '/facility-management',
+  },
+  {
+    icon: <FileCheck size={36} />,
+    title: 'Food Label Approval',
+    desc: 'Ensure your products meet Dubai Municipality standards with fast, hassle-free food label approvals.',
+    link: '/food-license-dubai',
+  },
+  {
+    icon: <Truck size={36} />,
+    title: 'Food Vehicle Permit',
+    desc: 'Secure necessary municipal approvals and permits for food transport and delivery vehicles.',
+    link: '/food-license-dubai',
   },
 ];
 
@@ -81,32 +105,28 @@ export default function Services() {
     <section className="services-elegant">
       <div className="services-header">
         <h2>
-          Our <span className="underline"><span className="text">Services</span></span>
+          Our <span className="underline"><span className="text">Business Setup Services</span></span>
         </h2>
-        <p>We provide comprehensive business solutions to help you establish and grow your presence in the UAE.</p>
+        <p>We handle complete business setup services in Dubai mainland and free zones, including trade license, visa, PRO, and VAT services. We also specialize in food business setup, food label approvals, cloud kitchen setup, and food vehicle permit approvals across Dubai.</p>
       </div>
 
       <div className="services-grid">
         {serviceData.map((service, i) => (
-          <div
+          <Link
+            to={service.link}
             key={i}
             className={`elegant-card ${visibleCards.includes(i) ? 'visible' : ''}`}
             ref={el => (cardRefs.current[i] = el)}
+            style={{ textDecoration: 'none' }}
           >
             <div className="icon">{service.icon}</div>
             <h3>{service.title}</h3>
             <p>{service.desc}</p>
-            <Link to={service.link} className="service-btn">
+            <span className="service-btn">
               Learn More →
-            </Link>
-          </div>
+            </span>
+          </Link>
         ))}
-      </div>
-
-      <div className="services-cta">
-        <h4>Let’s Build Your Success Story</h4>
-        <p>Contact our experts today to discuss how we can support your business journey.</p>
-        <a href="/contact" className="cta-button">Get Free Consultation</a>
       </div>
     </section>
   );

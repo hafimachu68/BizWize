@@ -1,0 +1,138 @@
+.testimonials-section {
+  padding: 6rem 2rem;
+  background-color: #0f172a;
+  font-family: 'Inter', sans-serif;
+}
+
+.test-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.test-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.test-header h2 {
+  font-size: 2.8rem;
+  color: #f8fafc;
+  margin-bottom: 1rem;
+}
+
+.test-header .highlight {
+  background: linear-gradient(90deg, #38bdf8, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.test-header p {
+  color: #94a3b8;
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.test-card {
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.test-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(56, 189, 248, 0.2);
+  background: rgba(30, 41, 59, 0.8);
+}
+
+.test-header-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar-placeholder {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #2563eb, #0284c7);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.test-meta h4 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  color: #f8fafc;
+}
+
+.test-company {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.test-stars {
+  display: flex;
+  gap: 4px;
+}
+
+.test-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  font-style: italic;
+  flex-grow: 1;
+}
+
+.video-placeholder {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  color: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+.video-placeholder:hover {
+  background: rgba(15, 23, 42, 0.9);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.play-icon {
+  color: #38bdf8;
+}
+
+.google-proof {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

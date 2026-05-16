@@ -1,12 +1,17 @@
 import React, { useRef } from 'react';
 import HeroSection from '../components/HeroSection';
+import TrustBanner from '../components/TrustBanner';
 import Services from '../components/Services';
+import IndustriesWeServe from '../components/IndustriesWeServe';
 import WhyChooseUs from '../components/WhyChooseUs';
+import Testimonials from '../components/Testimonials';
+import HomeFAQs from '../components/HomeFAQs';
 import ProcessSection from '../components/ProcessSection';
 import PricingPackages from '../components/PricingPackages';
-import ContactPrompt from '../components/ContactPrompt';
+import CostCalculator from '../components/CostCalculator';
+import LeadFormSection from '../components/LeadFormSection';
 import WhatsAppButton from '../components/WhatsAppButton';
-import SuccessBanner from '../components/SuccessBanner';
+import BottomCTA from '../components/BottomCTA';
 import SEO from '../components/SEO';
 
 export default function Home() {
@@ -48,17 +53,21 @@ export default function Home() {
   return (
     <div className="home-page">
       <SEO 
-        title="Home"
+        title="UAE's #1 Business Setup Company in 2026"
         description="BizWize is a top-tier business setup consultancy in Dubai, UAE. We specialize in mainland, freezone, and offshore company formation."
         schemaMarkup={localBusinessSchema}
       />
       <HeroSection ref={heroRef} />
-      <SuccessBanner/>
+      <TrustBanner />
       <Services />
       <PricingPackages onGetStarted={scrollToHeroForm} />
       <ProcessSection />
       <WhyChooseUs />
-      <ContactPrompt onInquiryClick={scrollToHeroForm} />
+      <Testimonials />
+      <CostCalculator />
+      <HomeFAQs />
+      <LeadFormSection />
+      <BottomCTA />
       <WhatsAppButton />
     </div>
   );
